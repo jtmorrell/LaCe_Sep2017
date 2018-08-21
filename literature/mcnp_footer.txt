@@ -1,0 +1,16 @@
+imp:n   1 {nmat}r       0  
+imp:h   1 {nmat}r       0  
+sdef  pos=-0.10 0.0 0.0  axs=1 0 0 ext=0 rad=d1 par=h vec=1 0 0 dir=1 erg=d2
+si1 0 0.848101           
+sp1 -21 1  
+si2 H {Elow} 19I {Ehigh}
+sp2 D 0 0.05 19R
+phys:n {Emax}
+phys:h {Emax} j 0    
+prdmp {Np} {Np} -1
+nps {Np}
+histp {cell_ids}
+f4:n {cell_ids} 
+e4 1 999I {Emax}                                                                  
+f14:h  {cell_ids} 
+e14 1 999I {Emax}

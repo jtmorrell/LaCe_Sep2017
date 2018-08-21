@@ -1,0 +1,40 @@
+#begin LSTTAB.CUR/u
+CN and preequilibrium cross se
+       fun: 057-La-139     (z,non)
+thick: 2  
+length:250
+//
+ 0.60000E+08   0.16036E+01
+//
+#end LSTTAB.CUR/u
+#begin LSTTAB.CUR/c
+x-scale: auto      
+y-scale: auto    
+//
+#end LSTTAB.CUR/c
+#begin LSTTAB.CUR/u
+       fun: 057-La-139     (z,fus)
+thick: 2  
+length:250
+//
+ 0.60000E+08   0.46543E+00
+//
+#end LSTTAB.CUR/u
+#begin LSTTAB.CUR/c
+x-scale: auto      
+y-scale: auto    
+//
+#end LSTTAB.CUR/c
+#begin LSTTAB.CUR/u
+       fun: 057-La-139 (z,exciton)
+thick: 2  
+length:250
+//
+ 0.60000E+08   0.11382E+01
+//
+#end LSTTAB.CUR/u
+#begin LSTTAB.CUR/c
+x-scale: auto      
+y-scale: auto    
+//
+#end LSTTAB.CUR/c

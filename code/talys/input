@@ -1,0 +1,7 @@
+projectile p
+element la
+mass 139
+energy 32 60 0.5
+
+outdensity y
+#mpreeqmode 1

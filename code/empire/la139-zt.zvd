@@ -1,0 +1,11 @@
+#begin LSTTAB.CUR/u
+       fun: 057-La-139       (z,h)
+thick: 2  
+length:250
+//
+ 0.60000E+08   0.43661E-02
+//
+#end LSTTAB.CUR/u
+#begin LSTTAB.CUR/c
+//
+#end LSTTAB.CUR/c

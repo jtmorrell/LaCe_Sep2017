@@ -1,0 +1,23 @@
+\begin{thebibliography}{1}
+
+\bibitem{TARKANYI2016262}
+F.~Tárkányi, F.~Ditrói, S.~Takács, A.~Hermanne, and M.~Baba.
+\newblock Activation cross sections of proton and deuteron induced nuclear
+  reactions on holmium and erbium, related to the production of 161er and 160er
+  medical isotopes.
+\newblock {\em Applied Radiation and Isotopes}, 115:262 -- 266, 2016.
+
+\bibitem{nuclear_data_needs}
+L.A. Bernstein, David Brown, Aaron Hurst, John Kelly, Filip Kondev,
+  E~Mccutchan, Caroline Nesaraja, R~Slaybaugh, and Alejandro Sonzogni.
+\newblock Nuclear data needs and capabilities for applications.
+\newblock 10 2015.
+
+\bibitem{ensdf}
+M.~R. Bhat.
+\newblock Evaluated nuclear structure data file (ensdf).
+\newblock In Syed~M. Qaim, editor, {\em Nuclear Data for Science and
+  Technology}, pages 817--821, Berlin, Heidelberg, 1992. Springer Berlin
+  Heidelberg.
+
+\end{thebibliography}
