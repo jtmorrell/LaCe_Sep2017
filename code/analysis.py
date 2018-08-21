@@ -944,8 +944,10 @@ class XS_library(object):
 			if prediction:
 				if istp in ['61CU']:
 					x4 = self.get_exfor(istp)
+					cl = plotter().pallate(shade='light')
+					clr_light = [cl['r'],cl['g'],cl['p'],cl['gy'],cl['o'],cl['b'],cl['aq']]
 					for n,a in enumerate(x4):
-						ax.errorbar(x4[a]['E'],x4[a]['XS'],xerr=x4[a]['dE'],yerr=x4[a]['dXS'],ls='None',marker='o',color=self.pallate['gy'],label=a)
+						ax.errorbar(x4[a]['E'],x4[a]['XS'],xerr=x4[a]['dE'],yerr=x4[a]['dXS'],ls='None',marker='o',color=clr_light[n],alpha=0.5,label=a)
 				elif istp in ['58CO','63ZN','62ZN','22NA','24NA']:
 					Erange = np.arange(min([i['E'] for i in xs])-1.0,max([i['E'] for i in xs]),0.1)
 					ax.plot(Erange,self.interpolate(istp,'monitor')(Erange),color=self.pallate['b'],label='IAEA Rec. Value')
@@ -955,11 +957,11 @@ class XS_library(object):
 					scl_empire = 0.05 if istp=='132CS' else 1.0
 					ax.plot(Erange,scl_talys*self.interpolate(istp,'talys')(Erange),color=self.pallate['b'],label=('0.1x ' if istp=='134CE' else '')+'TALYS Calculation',lw=2.0)
 					ax.plot(Erange,scl_empire*self.interpolate(istp,'empire')(Erange),color=self.pallate['r'],ls='--',label=('0.05x ' if istp=='132CS' else '')+'EMPIRE Calculation',lw=2.0)
-					# ax.plot(Erange,scl_talys*self.interpolate(istp,'alice')(Erange),color=self.pallate['p'],ls='-.',label=('0.1x ' if istp=='134CE' else '')+'ALICE Calculation',lw=2.0)
-			ax.errorbar([i['E'] for i in xs],[i['sigma'] for i in xs],xerr=[i['dE'] for i in xs],yerr=[i['unc_sigma'] for i in xs],ms=ms,ls='None',marker='o',color=self.pallate['k'],label=r'Measured $\sigma$'+'\n(this work)') #,elinewidth=3.0
+					ax.plot(Erange,scl_talys*self.interpolate(istp,'alice')(Erange),color=self.pallate['p'],ls='-.',label=('0.1x ' if istp=='134CE' else '')+'ALICE Calculation',lw=2.0)
+			ax.errorbar([i['E'] for i in xs],[i['sigma'] for i in xs],xerr=[i['dE'] for i in xs],yerr=[i['unc_sigma'] for i in xs],ms=ms,ls='None',marker='o',color=self.pallate['k'],label=r'Measured $\sigma$'+'\n(this work)',zorder=10) #,elinewidth=3.0
 			ax.set_xlabel('Energy (MeV)')#,fontsize=18
 			ax.set_ylabel('Cross Section (mb)')#,fontsize=18
-			ax.set_title(r'$^{nat}$'+foil_map[istp]+'(p,x)'+ip.TeX()+' Cross Section')
+			ax.set_title(r'$^{nat}$'+foil_map[istp]+'(p,'+('x' if istp[3:5]!='CE' else (str(140-int(istp[:3])) if istp!='139CE' else '')+'n')+')'+ip.TeX()+' Cross Section')
 			ax.legend(loc=0,fontsize=(10 if istp in ['58CO','61CU'] and prediction else None),borderaxespad=0.75)
 			f.tight_layout()
 			if saveplot:
@@ -1233,19 +1235,19 @@ class monitors(object):
 
 
 if __name__=="__main__":
-	cb = calibration()
+	# cb = calibration()
 	# cb.fits()
-	cb.energy_calibration()
+	# cb.energy_calibration()
 	# cb.efficiency_calibration()
 	# cb.resolution_calibration()
 
-	mn = monitors()
+	# mn = monitors()
 	# mn.fit_monitor_peaks()
 	# mn.fit_initial_activities()
 	# mn.calculate_current()
 	# mn.plot_Al_correction('22NA')
 	# mn.plot_Al_correction('24NA')
-	mn.minimize('az')
+	# mn.minimize('az')
 	# mn.minimize('mcnp')
 
 	xsl = XS_library()
@@ -1255,9 +1257,9 @@ if __name__=="__main__":
 	# xsl.fit_134CE_activity()
 	xsl.plot_cross_sections()
 	xsl.plot_cross_sections(prediction=False)
-	xsl.save_as_csv()
-	xsl.save_as_xlsx()
-	xsl.save_as_tex()
+	# xsl.save_as_csv()
+	# xsl.save_as_xlsx()
+	# xsl.save_as_tex()
 
 # zg = ziegler()
 # zg.generate_mcnp_input(dp=1.15,E0=57.0,dE0=0.4)

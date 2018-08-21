@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.6.10)  21 AUG 2018 07:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.6.10)  21 AUG 2018 11:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -411,148 +411,135 @@ LaTeX Info: Redefining \nameref on input line 23.
 Class revtex4-1 Info: Taking \maketitle back from hyperref on input line 23.
 \openout3 = `writeupNotes.bib'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 33.
+LaTeX Font Info:    Try loading font information for U+msa on input line 40.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 33.
+LaTeX Font Info:    Try loading font information for U+msb on input line 40.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
-Class revtex4-1 Warning: Assuming \noaffiliation for authors.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 43.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 36.
+(hyperref)                removing `superscript' on input line 43.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 36.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 36.
+(hyperref)                removing `math shift' on input line 43.
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<../plots/photos/foil_stack.png, id=164, 1107.38719pt x 746.79pt>
+<../plots/photos/foil_stack.png, id=162, 1107.38719pt x 746.79pt>
 File: ../plots/photos/foil_stack.png Graphic file (type png)
 <use ../plots/photos/foil_stack.png>
-Package pdftex.def Info: ../plots/photos/foil_stack.png  used on input line 104
+Package pdftex.def Info: ../plots/photos/foil_stack.png  used on input line 111
 .
 (pdftex.def)             Requested size: 256.0748pt x 172.68108pt.
 
-Overfull \hbox (10.0748pt too wide) in paragraph at lines 104--105
+Overfull \hbox (10.0748pt too wide) in paragraph at lines 111--112
  [][] 
  []
 
 [2 <../plots/photos/foil_stack.png>]
-<../plots/photos/cyclotron.png, id=181, 313.09229pt x 158.06148pt>
+<../plots/photos/cyclotron.png, id=182, 313.09229pt x 158.06148pt>
 File: ../plots/photos/cyclotron.png Graphic file (type png)
 <use ../plots/photos/cyclotron.png>
-Package pdftex.def Info: ../plots/photos/cyclotron.png  used on input line 120.
+Package pdftex.def Info: ../plots/photos/cyclotron.png  used on input line 127.
 
 (pdftex.def)             Requested size: 256.0748pt x 129.28804pt.
 
-Overfull \hbox (10.0748pt too wide) in paragraph at lines 120--121
+Overfull \hbox (10.0748pt too wide) in paragraph at lines 127--128
  [][] 
  []
 
-<../plots/calibration/energy_calibration.pdf, id=183, 462.52798pt x 346.89601pt
+<../plots/calibration/energy_calibration.pdf, id=184, 462.52798pt x 346.89601pt
 >
 File: ../plots/calibration/energy_calibration.pdf Graphic file (type pdf)
 <use ../plots/calibration/energy_calibration.pdf>
 Package pdftex.def Info: ../plots/calibration/energy_calibration.pdf  used on i
-nput line 136.
+nput line 143.
 (pdftex.def)             Requested size: 256.0748pt x 192.06375pt.
 
-Overfull \hbox (10.0748pt too wide) in paragraph at lines 136--137
+Overfull \hbox (10.0748pt too wide) in paragraph at lines 143--144
  [][] 
  []
 
-<../plots/calibration/efficiency_calibration.pdf, id=185, 462.52798pt x 346.896
+<../plots/calibration/efficiency_calibration.pdf, id=186, 462.52798pt x 346.896
 01pt>
 File: ../plots/calibration/efficiency_calibration.pdf Graphic file (type pdf)
 <use ../plots/calibration/efficiency_calibration.pdf>
 Package pdftex.def Info: ../plots/calibration/efficiency_calibration.pdf  used 
-on input line 151.
+on input line 158.
 (pdftex.def)             Requested size: 256.0748pt x 192.06375pt.
 
-Overfull \hbox (10.0748pt too wide) in paragraph at lines 151--152
+Overfull \hbox (10.0748pt too wide) in paragraph at lines 158--159
  [][] 
  []
 
 [3 <../plots/photos/cyclotron.png> <../plots/calibration/energy_calibration.pdf
-> <../plots/calibration/efficiency_calibration.pdf
-
-pdfTeX warning: pdflatex (file ../plots/calibration/efficiency_calibration.pdf)
-: PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<../plots/peak_fits/I_1cm_La01_fits.pdf, id=328, 925.05597pt x 346.89601pt>
-File: ../plots/peak_fits/I_1cm_La01_fits.pdf Graphic file (type pdf)
-<use ../plots/peak_fits/I_1cm_La01_fits.pdf>
-Package pdftex.def Info: ../plots/peak_fits/I_1cm_La01_fits.pdf  used on input 
-line 170.
-(pdftex.def)             Requested size: 256.0748pt x 96.02922pt.
 
-Overfull \hbox (10.0748pt too wide) in paragraph at lines 170--171
- [][] 
- []
-
-[4 <../plots/peak_fits/I_1cm_La01_fits.pdf>]
-<../plots/decay_curves/La07_133BAm.pdf, id=384, 462.52798pt x 346.89601pt>
-File: ../plots/decay_curves/La07_133BAm.pdf Graphic file (type pdf)
-<use ../plots/decay_curves/La07_133BAm.pdf>
-Package pdftex.def Info: ../plots/decay_curves/La07_133BAm.pdf  used on input l
-ine 233.
-(pdftex.def)             Requested size: 256.0748pt x 192.06375pt.
-
-Overfull \hbox (10.0748pt too wide) in paragraph at lines 233--234
- [][] 
- []
-
-<../plots/monitors/current_norm_mcnp.pdf, id=388, 462.52798pt x 346.89601pt>
-File: ../plots/monitors/current_norm_mcnp.pdf Graphic file (type pdf)
-<use ../plots/monitors/current_norm_mcnp.pdf>
-Package pdftex.def Info: ../plots/monitors/current_norm_mcnp.pdf  used on input
- line 253.
-(pdftex.def)             Requested size: 256.0748pt x 192.06375pt.
-
-Overfull \hbox (10.0748pt too wide) in paragraph at lines 253--254
- [][] 
- []
-
-[5 <../plots/decay_curves/La07_133BAm.pdf>]
-
-LaTeX Warning: A float is stuck (cannot be placed) on input line 260.
+LaTeX Warning: A float is stuck (cannot be placed) on input line 167.
 
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 260.
+LaTeX Warning: A float is stuck (cannot be placed) on input line 167.
 
 
 Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
 
-<../plots/monitors/La_az_spectrum.pdf, id=458, 462.52798pt x 346.89601pt>
-File: ../plots/monitors/La_az_spectrum.pdf Graphic file (type pdf)
-<use ../plots/monitors/La_az_spectrum.pdf>
-Package pdftex.def Info: ../plots/monitors/La_az_spectrum.pdf  used on input li
-ne 266.
-(pdftex.def)             Requested size: 256.0748pt x 192.06375pt.
+<../plots/peak_fits/I_1cm_La01_fits.pdf, id=264, 925.05597pt x 346.89601pt>
+File: ../plots/peak_fits/I_1cm_La01_fits.pdf Graphic file (type pdf)
+<use ../plots/peak_fits/I_1cm_La01_fits.pdf>
+Package pdftex.def Info: ../plots/peak_fits/I_1cm_La01_fits.pdf  used on input 
+line 177.
+(pdftex.def)             Requested size: 256.0748pt x 96.02922pt.
 
-Overfull \hbox (10.0748pt too wide) in paragraph at lines 266--267
+Overfull \hbox (10.0748pt too wide) in paragraph at lines 177--178
  [][] 
  []
 
-<../plots/monitors/minimize_az.pdf, id=460, 462.52798pt x 346.89601pt>
-File: ../plots/monitors/minimize_az.pdf Graphic file (type pdf)
-<use ../plots/monitors/minimize_az.pdf>
-Package pdftex.def Info: ../plots/monitors/minimize_az.pdf  used on input line 
-281.
+[4 <../plots/calibration/efficiency_calibration.pdf> <../plots/peak_fits/I_1cm_
+La01_fits.pdf
+
+pdfTeX warning: pdflatex (file ../plots/peak_fits/I_1cm_La01_fits.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+>]
+<../plots/decay_curves/La07_133BAm.pdf, id=384, 462.52798pt x 346.89601pt>
+File: ../plots/decay_curves/La07_133BAm.pdf Graphic file (type pdf)
+<use ../plots/decay_curves/La07_133BAm.pdf>
+Package pdftex.def Info: ../plots/decay_curves/La07_133BAm.pdf  used on input l
+ine 240.
 (pdftex.def)             Requested size: 256.0748pt x 192.06375pt.
 
-Overfull \hbox (10.0748pt too wide) in paragraph at lines 281--282
+Overfull \hbox (10.0748pt too wide) in paragraph at lines 240--241
+ [][] 
+ []
+
+[5 <../plots/decay_curves/La07_133BAm.pdf>]
+<../plots/monitors/current_norm_mcnp.pdf, id=454, 462.52798pt x 346.89601pt>
+File: ../plots/monitors/current_norm_mcnp.pdf Graphic file (type pdf)
+<use ../plots/monitors/current_norm_mcnp.pdf>
+Package pdftex.def Info: ../plots/monitors/current_norm_mcnp.pdf  used on input
+ line 260.
+(pdftex.def)             Requested size: 256.0748pt x 192.06375pt.
+
+Overfull \hbox (10.0748pt too wide) in paragraph at lines 260--261
+ [][] 
+ []
+
+<../plots/monitors/La_az_spectrum.pdf, id=459, 462.52798pt x 346.89601pt>
+File: ../plots/monitors/La_az_spectrum.pdf Graphic file (type pdf)
+<use ../plots/monitors/La_az_spectrum.pdf>
+Package pdftex.def Info: ../plots/monitors/La_az_spectrum.pdf  used on input li
+ne 273.
+(pdftex.def)             Requested size: 256.0748pt x 192.06375pt.
+
+Overfull \hbox (10.0748pt too wide) in paragraph at lines 273--274
  [][] 
  []
 
@@ -562,344 +549,359 @@ pdf
 pdfTeX warning: pdflatex (file ../plots/monitors/La_az_spectrum.pdf): PDF inclu
 sion: multiple pdfs with page group included in a single page
 >]
+<../plots/monitors/minimize_az.pdf, id=579, 462.52798pt x 346.89601pt>
+File: ../plots/monitors/minimize_az.pdf Graphic file (type pdf)
+<use ../plots/monitors/minimize_az.pdf>
+Package pdftex.def Info: ../plots/monitors/minimize_az.pdf  used on input line 
+288.
+(pdftex.def)             Requested size: 256.0748pt x 192.06375pt.
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 290.
+Overfull \hbox (10.0748pt too wide) in paragraph at lines 288--289
+ [][] 
+ []
 
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 290.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 306.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 306.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 306.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 306.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 306.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 306.
+
+<../plots/cross_sections/134CE.pdf, id=589, 462.52798pt x 346.89601pt>
+File: ../plots/cross_sections/134CE.pdf Graphic file (type pdf)
+<use ../plots/cross_sections/134CE.pdf>
+Package pdftex.def Info: ../plots/cross_sections/134CE.pdf  used on input line 
+313.
+(pdftex.def)             Requested size: 256.0748pt x 192.06375pt.
+
+Overfull \hbox (10.0748pt too wide) in paragraph at lines 313--314
+ [][] 
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 321.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 321.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 321.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 321.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 321.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 321.
+
+[7 <../plots/monitors/minimize_az.pdf>]
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 324.
+
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 324.
 
 
 Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 299.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 299.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 299.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 299.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 299.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 299.
-
-<../plots/cross_sections/134CE.pdf, id=587, 462.52798pt x 346.89601pt>
-File: ../plots/cross_sections/134CE.pdf Graphic file (type pdf)
-<use ../plots/cross_sections/134CE.pdf>
-Package pdftex.def Info: ../plots/cross_sections/134CE.pdf  used on input line 
-306.
-(pdftex.def)             Requested size: 256.0748pt x 192.06375pt.
-
-Overfull \hbox (10.0748pt too wide) in paragraph at lines 306--307
- [][] 
- []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 314.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 314.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 314.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 314.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 314.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 314.
-
-[7 <../plots/monitors/minimize_az.pdf> <../plots/cross_sections/134CE.pdf
-
-pdfTeX warning: pdflatex (file ../plots/cross_sections/134CE.pdf): PDF inclusio
-n: multiple pdfs with page group included in a single page
->]
-<../plots/cross_sections/135CE.pdf, id=705, 462.52798pt x 346.89601pt>
+<../plots/cross_sections/135CE.pdf, id=650, 462.52798pt x 346.89601pt>
 File: ../plots/cross_sections/135CE.pdf Graphic file (type pdf)
 <use ../plots/cross_sections/135CE.pdf>
 Package pdftex.def Info: ../plots/cross_sections/135CE.pdf  used on input line 
-319.
+326.
 (pdftex.def)             Requested size: 256.0748pt x 192.06375pt.
 
-Overfull \hbox (10.0748pt too wide) in paragraph at lines 319--320
+Overfull \hbox (10.0748pt too wide) in paragraph at lines 326--327
  [][] 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 327.
+(hyperref)                removing `math shift' on input line 334.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 327.
+(hyperref)                removing `superscript' on input line 334.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 327.
+(hyperref)                removing `math shift' on input line 334.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 327.
+(hyperref)                removing `math shift' on input line 334.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 327.
+(hyperref)                removing `superscript' on input line 334.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 327.
+(hyperref)                removing `math shift' on input line 334.
 
-<../plots/cross_sections/137CEm.pdf, id=707, 462.52798pt x 346.89601pt>
+<../plots/cross_sections/137CEm.pdf, id=652, 462.52798pt x 346.89601pt>
 File: ../plots/cross_sections/137CEm.pdf Graphic file (type pdf)
 <use ../plots/cross_sections/137CEm.pdf>
 Package pdftex.def Info: ../plots/cross_sections/137CEm.pdf  used on input line
- 332.
+ 339.
 (pdftex.def)             Requested size: 256.0748pt x 192.06375pt.
 
-Overfull \hbox (10.0748pt too wide) in paragraph at lines 332--333
+Overfull \hbox (10.0748pt too wide) in paragraph at lines 339--340
  [][] 
  []
 
-<../plots/cross_sections/137CEg.pdf, id=710, 462.52798pt x 346.89601pt>
+
+Underfull \hbox (badness 1721) in paragraph at lines 345--346
+\OT1/cmr/m/n/10 re-ac-tion are plot-ted in Fig. [][]12[][], as well as the
+ []
+
+<../plots/cross_sections/137CEg.pdf, id=655, 462.52798pt x 346.89601pt>
 File: ../plots/cross_sections/137CEg.pdf Graphic file (type pdf)
 <use ../plots/cross_sections/137CEg.pdf>
 Package pdftex.def Info: ../plots/cross_sections/137CEg.pdf  used on input line
- 341.
+ 348.
 (pdftex.def)             Requested size: 256.0748pt x 192.06375pt.
 
-Overfull \hbox (10.0748pt too wide) in paragraph at lines 341--342
+Overfull \hbox (10.0748pt too wide) in paragraph at lines 348--349
  [][] 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 347.
+(hyperref)                removing `math shift' on input line 354.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 347.
+(hyperref)                removing `superscript' on input line 354.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 347.
+(hyperref)                removing `math shift' on input line 354.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 347.
+(hyperref)                removing `math shift' on input line 354.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 347.
+(hyperref)                removing `superscript' on input line 354.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 347.
+(hyperref)                removing `math shift' on input line 354.
 
-[8 <../plots/cross_sections/135CE.pdf> <../plots/cross_sections/137CEm.pdf
+[8 <../plots/cross_sections/134CE.pdf> <../plots/cross_sections/135CE.pdf
+
+pdfTeX warning: pdflatex (file ../plots/cross_sections/135CE.pdf): PDF inclusio
+n: multiple pdfs with page group included in a single page
+> <../plots/cross_sections/137CEm.pdf
 
 pdfTeX warning: pdflatex (file ../plots/cross_sections/137CEm.pdf): PDF inclusi
 on: multiple pdfs with page group included in a single page
-> <../plots/cross_sections/137CEg.pdf
-
-pdfTeX warning: pdflatex (file ../plots/cross_sections/137CEg.pdf): PDF inclusi
-on: multiple pdfs with page group included in a single page
 >]
-<../plots/cross_sections/139CE.pdf, id=909, 462.52798pt x 346.89601pt>
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 357.
+
+
+LaTeX Warning: A float is stuck (cannot be placed) on input line 357.
+
+
+Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+
+<../plots/cross_sections/139CE.pdf, id=849, 462.52798pt x 346.89601pt>
 File: ../plots/cross_sections/139CE.pdf Graphic file (type pdf)
 <use ../plots/cross_sections/139CE.pdf>
 Package pdftex.def Info: ../plots/cross_sections/139CE.pdf  used on input line 
-352.
+359.
 (pdftex.def)             Requested size: 256.0748pt x 192.06375pt.
 
-Overfull \hbox (10.0748pt too wide) in paragraph at lines 352--353
+Overfull \hbox (10.0748pt too wide) in paragraph at lines 359--360
  [][] 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 360.
+(hyperref)                removing `math shift' on input line 367.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 360.
+(hyperref)                removing `superscript' on input line 367.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 360.
+(hyperref)                removing `math shift' on input line 367.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 360.
+(hyperref)                removing `math shift' on input line 367.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 360.
+(hyperref)                removing `superscript' on input line 367.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 360.
+(hyperref)                removing `math shift' on input line 367.
 
-<../plots/cross_sections/132CS.pdf, id=912, 462.52798pt x 346.89601pt>
+<../plots/cross_sections/132CS.pdf, id=852, 462.52798pt x 346.89601pt>
 File: ../plots/cross_sections/132CS.pdf Graphic file (type pdf)
 <use ../plots/cross_sections/132CS.pdf>
 Package pdftex.def Info: ../plots/cross_sections/132CS.pdf  used on input line 
-365.
+372.
 (pdftex.def)             Requested size: 256.0748pt x 192.06375pt.
 
-Overfull \hbox (10.0748pt too wide) in paragraph at lines 365--366
+Overfull \hbox (10.0748pt too wide) in paragraph at lines 372--373
  [][] 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 373.
+(hyperref)                removing `math shift' on input line 380.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 373.
+(hyperref)                removing `superscript' on input line 380.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 373.
+(hyperref)                removing `math shift' on input line 380.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 373.
+(hyperref)                removing `math shift' on input line 380.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 373.
+(hyperref)                removing `superscript' on input line 380.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 373.
+(hyperref)                removing `math shift' on input line 380.
 
-<../plots/cross_sections/133BAg.pdf, id=915, 462.52798pt x 346.89601pt>
-File: ../plots/cross_sections/133BAg.pdf Graphic file (type pdf)
-<use ../plots/cross_sections/133BAg.pdf>
-Package pdftex.def Info: ../plots/cross_sections/133BAg.pdf  used on input line
- 378.
-(pdftex.def)             Requested size: 256.0748pt x 192.06375pt.
+[9 <../plots/cross_sections/137CEg.pdf> <../plots/cross_sections/139CE.pdf
 
-Overfull \hbox (10.0748pt too wide) in paragraph at lines 378--379
- [][] 
- []
-
-<../plots/cross_sections/133BAm.pdf, id=917, 462.52798pt x 346.89601pt>
-File: ../plots/cross_sections/133BAm.pdf Graphic file (type pdf)
-<use ../plots/cross_sections/133BAm.pdf>
-Package pdftex.def Info: ../plots/cross_sections/133BAm.pdf  used on input line
- 387.
-(pdftex.def)             Requested size: 256.0748pt x 192.06375pt.
-
-Overfull \hbox (10.0748pt too wide) in paragraph at lines 387--388
- [][] 
- []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 395.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 395.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 395.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 395.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 395.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 395.
-
-[9 <../plots/cross_sections/139CE.pdf> <../plots/cross_sections/132CS.pdf
+pdfTeX warning: pdflatex (file ../plots/cross_sections/139CE.pdf): PDF inclusio
+n: multiple pdfs with page group included in a single page
+> <../plots/cross_sections/132CS.pdf
 
 pdfTeX warning: pdflatex (file ../plots/cross_sections/132CS.pdf): PDF inclusio
 n: multiple pdfs with page group included in a single page
 >]
+<../plots/cross_sections/133BAg.pdf, id=1048, 462.52798pt x 346.89601pt>
+File: ../plots/cross_sections/133BAg.pdf Graphic file (type pdf)
+<use ../plots/cross_sections/133BAg.pdf>
+Package pdftex.def Info: ../plots/cross_sections/133BAg.pdf  used on input line
+ 385.
+(pdftex.def)             Requested size: 256.0748pt x 192.06375pt.
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 398.
+Overfull \hbox (10.0748pt too wide) in paragraph at lines 385--386
+ [][] 
+ []
+
+<../plots/cross_sections/133BAm.pdf, id=1050, 462.52798pt x 346.89601pt>
+File: ../plots/cross_sections/133BAm.pdf Graphic file (type pdf)
+<use ../plots/cross_sections/133BAm.pdf>
+Package pdftex.def Info: ../plots/cross_sections/133BAm.pdf  used on input line
+ 394.
+(pdftex.def)             Requested size: 256.0748pt x 192.06375pt.
+
+Overfull \hbox (10.0748pt too wide) in paragraph at lines 394--395
+ [][] 
+ []
 
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 398.
+Underfull \hbox (badness 10000) in paragraph at lines 400--401
+[]\OT1/cmr/m/n/10 Fig. [][]17[][] plots the mea-sured cross sec-
+ []
 
 
-Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+Underfull \hbox (badness 10000) in paragraph at lines 400--401
+\OT1/cmr/m/n/10 tions for the $[]$La(p,x)$[]$Ba re-ac-tion, and
+ []
 
-<../plots/cross_sections/135LA.pdf, id=1053, 462.52798pt x 346.89601pt>
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 402.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 402.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 402.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 402.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `superscript' on input line 402.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 402.
+
+<../plots/cross_sections/135LA.pdf, id=1052, 462.52798pt x 346.89601pt>
 File: ../plots/cross_sections/135LA.pdf Graphic file (type pdf)
 <use ../plots/cross_sections/135LA.pdf>
 Package pdftex.def Info: ../plots/cross_sections/135LA.pdf  used on input line 
-400.
+407.
 (pdftex.def)             Requested size: 256.0748pt x 192.06375pt.
 
-Overfull \hbox (10.0748pt too wide) in paragraph at lines 400--401
+Overfull \hbox (10.0748pt too wide) in paragraph at lines 407--408
  [][] 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 408.
+(hyperref)                removing `math shift' on input line 415.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 408.
+(hyperref)                removing `superscript' on input line 415.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 408.
+(hyperref)                removing `math shift' on input line 415.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 408.
+(hyperref)                removing `math shift' on input line 415.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 408.
+(hyperref)                removing `superscript' on input line 415.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 408.
-
-<../plots/cross_sections/61CU.pdf, id=1057, 462.52798pt x 346.89601pt>
-File: ../plots/cross_sections/61CU.pdf Graphic file (type pdf)
-<use ../plots/cross_sections/61CU.pdf>
-Package pdftex.def Info: ../plots/cross_sections/61CU.pdf  used on input line 4
-13.
-(pdftex.def)             Requested size: 256.0748pt x 192.06375pt.
-
-Overfull \hbox (10.0748pt too wide) in paragraph at lines 413--414
- [][] 
- []
+(hyperref)                removing `math shift' on input line 415.
 
 [10 <../plots/cross_sections/133BAg.pdf> <../plots/cross_sections/133BAm.pdf
 
@@ -910,14 +912,16 @@ on: multiple pdfs with page group included in a single page
 pdfTeX warning: pdflatex (file ../plots/cross_sections/135LA.pdf): PDF inclusio
 n: multiple pdfs with page group included in a single page
 >]
+<../plots/cross_sections/61CU.pdf, id=1251, 462.52798pt x 346.89601pt>
+File: ../plots/cross_sections/61CU.pdf Graphic file (type pdf)
+<use ../plots/cross_sections/61CU.pdf>
+Package pdftex.def Info: ../plots/cross_sections/61CU.pdf  used on input line 4
+20.
+(pdftex.def)             Requested size: 256.0748pt x 192.06375pt.
 
-LaTeX Warning: A float is stuck (cannot be placed) on input line 424.
-
-
-LaTeX Warning: A float is stuck (cannot be placed) on input line 424.
-
-
-Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
+Overfull \hbox (10.0748pt too wide) in paragraph at lines 420--421
+ [][] 
+ []
 
 (./writeup.bbl
 Missing character: There is no Ã in font cmr9!
@@ -943,45 +947,46 @@ Underfull \hbox (badness 1019) in paragraph at lines 134--139
  \OT1/cmr/m/n/9 A. Blokhin, M. Aikawa, S. Babyk-ina, M. Bossant,
  []
 
+[11 <../plots/cross_sections/61CU.pdf>]
 Missing character: There is no Å in font cmr9!
 Missing character: There is no ¾ in font cmr9!
 Missing character: There is no Ã in font cmr9!
 Missing character: There is no ½ in font cmr9!
-[11 <../plots/cross_sections/61CU.pdf>]) (../data/cross_sections/la139_XS.tex
+) (../data/cross_sections/la139_XS.tex
 [12])
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\begingroup' on input line 434.
+(hyperref)                removing `\begingroup' on input line 441.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\<let>-command' on input line 434.
+(hyperref)                removing `\<let>-command' on input line 441.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\NAT@ctype' on input line 434.
+(hyperref)                removing `\NAT@ctype' on input line 441.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\z@' on input line 434.
+(hyperref)                removing `\z@' on input line 441.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\let' on input line 434.
+(hyperref)                removing `\let' on input line 441.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\let' on input line 434.
+(hyperref)                removing `\let' on input line 441.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\new@ifnextchar' on input line 434.
+(hyperref)                removing `\new@ifnextchar' on input line 441.
 
 [13]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 462.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 469.
  (./writeup.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 462.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 462.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 469.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 469.
 Package rerunfilecheck Info: File `writeup.out' has not changed.
 (rerunfilecheck)             Checksum: 1C93F28D8734EFC6D5784E68A4A674BA;2104.
 
@@ -990,13 +995,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 8461 strings out of 492982
- 120452 string characters out of 6134896
- 351532 words of memory out of 5000000
- 11802 multiletter control sequences out of 15000+600000
+ 8468 strings out of 492982
+ 120574 string characters out of 6134896
+ 368884 words of memory out of 5000000
+ 11808 multiletter control sequences out of 15000+600000
  18667 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,9n,32p,907b,538s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,9n,32p,1014b,490s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texli
@@ -1013,10 +1018,10 @@ e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on writeup.pdf (13 pages, 4637977 bytes).
+Output written on writeup.pdf (13 pages, 4611953 bytes).
 PDF statistics:
- 1469 PDF objects out of 1728 (max. 8388607)
- 515 compressed objects within 6 object streams
- 90 named destinations out of 1000 (max. 500000)
+ 1470 PDF objects out of 1728 (max. 8388607)
+ 520 compressed objects within 6 object streams
+ 91 named destinations out of 1000 (max. 500000)
  328 words of extra memory for PDF output out of 10000 (max. 10000000)
 

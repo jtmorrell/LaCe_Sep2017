@@ -1,5 +1,5 @@
 %\documentclass[aps,twocolumn,secnumarabic,balancelastpage,amsmath,amssymb,nofootinbib, floatfix]{revtex4}
-\documentclass[aps,twocolumn,secnumarabic,balancelastpage,amsmath,amssymb,nofootinbib,floatfix]{revtex4-1}
+\documentclass[aps,superscriptaddress,twocolumn,secnumarabic,balancelastpage,amsmath,amssymb,nofootinbib,floatfix]{revtex4-1}
 %\documentclass[5p]{elsarticle}
 \newcommand{\abs}[1]{\lvert#1\rvert}
 
@@ -25,12 +25,19 @@
 \author{Jonathan T. Morrell}
 %\email{jmorrell@berkeley.edu}
 %\homepage{http://www.jonathanmorrell.info/} %If you don't have one, just comment out this line.
+\affiliation{University of California, Berkeley - Nuclear Engineering}
+\author{Lee A. Bernstein}
+\affiliation{University of California, Berkeley - Nuclear Engineering}
+\affiliation{Lawrence Berkeley National Lab}
+\author{Andrew Voyles}
+\affiliation{University of California, Berkeley - Nuclear Engineering}
+\author{Shamsu Basunia}
+\affiliation{Lawrence Berkeley National Lab}
 \date{\today}
-%\affiliation{University of California, Berkeley - Nuclear Engineering}
 \setlength{\parskip}{1em}
 
 \begin{abstract}
-In this experiment we use the stacked foil activation technique to measure cross sections for the $^{nat}$La(p,x) reaction, with proton energies in the 35-60 MeV range.  The primary motivation for this measurement is to quantify the production of $^{134}$Ce, a positron-emitting analogue of the medical isotope $^{225}$Ac, which has applications for kinetic bio-distribution assays of new radio-pharmaceuticals.  The results of this measurement show significant deviations from the cross sections modeled by the TALYS and EMPIRE nuclear reaction codes using default parameters.  There are no previous measurements of this reaction for comparison.
+In this experiment we used the stacked foil activation technique to measure cross sections for the $^{nat}$La(p,x) reaction, with proton energies in the 35-60 MeV range.  The primary motivation for this measurement was to quantify the production of $^{134}$Ce, a positron-emitting analogue of the promising medical isotope $^{225}$Ac, with applications for kinetic bio-distribution assays of new radio-pharmaceuticals.  The results of this measurement showed significant deviations from the cross sections modeled by the TALYS, EMPIRE and ALICE nuclear reaction codes using default parameters.  There are no previous measurements of this reaction for comparison.
 \end{abstract}
 
 \maketitle
@@ -42,11 +49,11 @@ Proton induced nuclear reactions in the tens of MeV range are used for the produ
 In this experiment, we measure the $^{nat}$La(p,x) reaction cross sections with a particular interest in the (p,6n) reaction on $^{139}$La (99.9119\% n.a.) for the production of $^{134}$Ce, a medically relevant isotope.  This experiment is also meaningful to the reaction modelling community, as this will be the first measurement of these cross sections.  These reactions are highly sensitive to pre-eqillibrium and nuclear spin-state distributions, and the results of this experiment will be useful for the comparison of various nuclear models. \cite{OTUKA2014272, PhysRev.87.366, nuclear_data_needs}.
 
 \subsection{Motivation}
-$^{225}$Ac is a promising candidate for new alpha-emitting radio-pharmaceuticals \cite{BOLL2005667}.  $^{225}$Ac has a half-life of 10 days, and decays to the stable $^{209}$Bi through the emission of 4 $\alpha$ and 2 $\beta^-$ particles. The longest half-life of any of the intermediates in the decay chain is the the 3.2 h $^{209}$Pb.  Also, many potential ligands are available for the chelation of $^{225}$Ac.  These properties make $^{225}$Ac a very compelling candidate for targeted radio-therapy \cite{BOLL2005667}.  However, before $^{225}$Ac can be tested on human subjects its performance must be quantified with biodistribution assays \cite{doi:10.1021/ac0580114}.  Unfortunately, the standard for these assays is to use positron emission tomography, which isn't possible with $^{225}$Ac because its decay chain doesn't include the emission of any positrons.
+$^{225}$Ac is a promising candidate for new alpha-emitting radio-pharmaceuticals \cite{BOLL2005667}.  $^{225}$Ac has a relatively short half-life of 10 days, and decays to the stable $^{209}$Bi through the emission of 4 $\alpha$ and 2 $\beta^-$ particles, which have short ranges in human tissue. There are no long-lived residual decay products: the longest half-life of any of the intermediates in the decay chain is the the 3.2 h $^{209}$Pb.  Also, many potential ligands are available for the chelation of $^{225}$Ac.  These properties make $^{225}$Ac a very compelling candidate for targeted radio-therapy \cite{BOLL2005667}.  However, before $^{225}$Ac can be tested on human subjects its performance must be quantified with biodistribution assays \cite{doi:10.1021/ac0580114}.  Unfortunately, the standard for these assays is to use positron emission tomography, which isn't possible with $^{225}$Ac because its decay chain doesn't include the emission of any positrons.
 
 Instead, $^{134}$Ce has been proposed as a candidate isotope to be used as a positron emitting analogue of $^{225}$Ac, for use in rapid throughput kinetic biodistribution assays.  $^{134}$Ce decays with a half-life of 3.16 days, which is the closest of the $\beta^+$ emitting Ce isotopes to the 10 day half-life of $^{225}$Ac \cite{ensdf}.  It's daughter $^{134}$La also $\beta^+$ decays with a very short half-life (6.4 minutes), increasing its effectiveness as a biodistribution monitor.  
 
-The proposed mechanism for the production of $^{134}$Ce is through the $^{139}$La(p,6n) reaction, using natural Lanthanum which has an isotopic abundance of $^{139}$La of 99.91 \%.  To date, this cross section has not been measured experimentally, and the predictions of the extensively used TALYS \cite{TALYS} and EMPIRE \cite{HERMAN20072655} nuclear reaction modelling codes differ by an order of magnitude (see figure \ref{fig:134CE}).  The objective of this experiment is to measure this cross section, as well as that of any other $^{nat}$La(p,x) reaction observable using the delayed-$\gamma$ stacked foil activation technique.
+The proposed mechanism for the production of bulk quantities of $^{134}$Ce is through the $^{139}$La(p,6n) reaction, using targets of natural Lanthanum having a 99.91 \% isotopic abundance of $^{139}$La.  To date, this cross section has not been measured experimentally, and the predictions of the extensively used TALYS \cite{TALYS} and EMPIRE \cite{HERMAN20072655} nuclear reaction modelling codes differ by an order of magnitude (see figure \ref{fig:134CE}).  The objective of this experiment is to measure this cross section, as well as that of any other $^{nat}$La(p,x) reaction observable using the delayed-$\gamma$ stacked foil activation technique.
 
 
 \section{Methodology}
@@ -78,7 +85,7 @@ A_0 = \frac{\lambda N_c}{(1-e^{-\lambda t_m})e^{-\lambda t_c}I_{\gamma}\epsilon}
 
 where $I_{\gamma}$ is the $\gamma$ emission fraction per decay and $\epsilon$ is the detector efficiency at the energy of the photo-peak.
 
-The proton beam current $I_p$ was determined using a copper and aluminum monitor foil for each lanthanum foil in the stack.  These foils have multiple reaction channels with very well characterized cross sections \cite{IAEACPR}, allowing for precise determination of the beam current using a very similar activation procedure to that described by equation \ref{eq:xs_calc}, where instead of calculating the cross section using a known beam current we calculate the beam current using a known cross section, i.e.
+The proton beam current $I_p$ was determined using a copper and aluminum monitor foil for each lanthanum foil in the stack.  These foils have multiple reaction channels with very well characterized cross sections \cite{IAEACPR}, allowing for precise determination of the beam current using a very similar activation procedure to that described by equation \ref{eq:xs_calc}. However instead of calculating the cross section using a known beam current, we calculate the beam current using a known cross section, i.e.
 
 \begin{equation}
 I_p =  A_0[\sigma \rho \Delta r (1-e^{-\lambda t_i})]^{-1}
@@ -98,7 +105,7 @@ This energy spectrum was determined for each foil in the stack using a Monte Car
 
 \subsection{Description of Experiment}
 
-The lanthanum foils used in this experiment were cold rolled to 25 $\mu$m thickness, cut to 1" by 1" squares, and sealed in glass ampules with an inert cover gas (to prevent oxidation).  Just prior to the experiment these ampules were opened, their dimensions and masses were measured, and they were then sealed in kapton tape.  The copper and aluminum monitor foils were cut from 25 $\mu$m thick sheets into 1" by 1" squares, and were also measured and sealed in kapton tape.  These foil packets were then secured onto 2.25" by 2.25" aluminum sample holders (see Fig. \ref{fig:expt_photos}), which served to both protect the foils during handling and center them in the beam.  10 sets of aluminum, copper and lanthanum foil packets were prepared in this manner for cross section measurements at 10 energies.
+The lanthanum foils used in this experiment were cold rolled to 25 $\mu$m thickness, cut to 1" by 1" squares, and sealed in glass ampules with an inert cover gas (to prevent oxidation).  Just prior to the experiment these ampules were opened, and the foils were removed. The dimensions and masses of these foils were measured, and then they were sealed in kapton tape.  The copper and aluminum monitor foils were cut from 25 $\mu$m thick sheets into 1" by 1" squares, and were also measured and sealed in kapton tape.  These foil packets were then secured onto 2.25" by 2.25" aluminum sample holders (see Fig. \ref{fig:expt_photos}), which protected the foils during handling and centered them in the beam pipe.  10 sets of aluminum, copper and lanthanum foil packets were prepared in this manner for cross section measurements at 10 different energies.
 
 \begin{figure}[htb]
 \includegraphics[width=9cm]{photos/foil_stack.png}
@@ -107,9 +114,9 @@ The lanthanum foils used in this experiment were cold rolled to 25 $\mu$m thickn
 \label{fig:expt_photos}
 \end{figure}
 
-Multiple thick aluminum plates, also 2.25" by 2.25", were placed in between each set of foil packets to degrade the beam energy by a few MeV (per degrader), covering the proton energy range from 35 - 60 MeV.  The appropriate thickness for each aluminum degrader was selected using an Anderson \& Ziegler calculation, however the actual proton energy distributions seen by each foil were determined using the monitor foils themselves.  This is described in more detail in section \ref{monitors}.
+Multiple thick aluminum plates, also 2.25" by 2.25", were placed in between each set of foil packets to degrade the beam energy by a few MeV (per degrader), allowing cross section measurements over a range of proton energies from 35 - 60 MeV.  The appropriate thickness for each aluminum degrader was determined using an Anderson \& Ziegler calculation, however the actual proton energy distributions seen by each foil were more carefully calculated using the monitor foil reactions.  This is described in more detail in section \ref{monitors}.
 
-Additionally, stainless steel foils were placed at the front and back of the stack.  Post-irradiation dose mapping using radio-chromic films confirmed that the proton beam was centered on the samples, and that the entirety of the beam was contained well within the 1" by 1" borders of the foil packets.
+Additionally, stainless steel foils were placed at the front and back of the stack.  Post-irradiation dose mapping using radio-chromic films confirmed that the proton beam was centered on the samples, and that the entirety of the $\approx$1 cm pencil beam was contained well within the 1" by 1" borders of the foil packets.
 
 \subsection{Facility Overview}
 This experiment took place using a 60 MeV proton beam at the 88" cyclotron located at Lawrence Berkeley National Lab in Berkeley, California USA.  The 88" cyclotron is a K=140 sector focused cyclotron with a maximum proton energy of 60 MeV and a maximum proton beam current of approximately 20 $\mu$A.
@@ -130,7 +137,7 @@ This experiment marks the first time the 88" cyclotron has attempted operating w
 
 The energy and efficiency of the HPGe detector used in this measurement were calibrated using 4 standard calibration sources of known activity (rel. error $<$1\%): $^{137}$Cs, $^{152}$Eu, $^{54}$Mn and $^{133}$Ba.
 
-A linear calibration of the $\gamma$-ray energy $E$ to the MCA channel number $N$, $E = m\cdot N+b$, was applied, and a plot of the residuals (Fig. \ref{fig:energy_calibration}) shows that this is the correct functional form of the energy calibration, i.e. that there is no quadratic component to the detector response.
+A linear calibration of the $\gamma$-ray energy $E$ to the MCA channel number $N$, $E = m\cdot N+b$, was applied, and a plot of the residuals (Fig. \ref{fig:energy_calibration}) shows that this is the correct functional form of the energy calibration, i.e. that there is no quadratic component to the detector response (within the resolution of the detector system).
 
 \begin{figure}[htb]
 \includegraphics[width=9cm]{calibration/energy_calibration.pdf}
@@ -162,7 +169,7 @@ After irradiation, the foils were removed from the beamline and transferred to t
 The subsequent foil counting took place over the next 4 weeks.  Each foil was counted multiple times, in order to reduce uncertainty and aid in isotope identification.  The lengthy counting duration was necessary because the 604.6 and the 606.8 keV lines from the $^{135}$Ce isotope significantly contaminated the 604.7 keV line in the $^{134}$Ce daughter isotope $^{134}$La. Because the $^{134}$Ce isotope has a longer half life, it was able to be accurately counted after the $^{135}$Ce isotope had decayed to negligible levels.
 
 \section{Data Analysis}
-The general procedure for calculating cross sections proceeds as follows.  First, every $\gamma$ line emitted from each isotope of interest was fit in each spectrum collected.  The number of counts in each peak was used to determine the activity of the isotope at the time the spectrum was taken, and these activities as a function of "cooling" time was used to calculate the activity of that isotope at the end of irradiation.  This activity $A_0$ was then used to calculate a cross section (for the lanthanum foil data) or a beam current (for the copper/aluminum foil data).  The energy assignments for each foil was determined using a variation of parameters approach, discussed in section \ref{monitors}.
+The general procedure for calculating cross sections proceeds as follows.  First, every $\gamma$ line emitted from each isotope of interest was fit in each spectrum collected.  The number of counts in each peak was used to determine the activity of the isotope at the time the spectrum was taken, and these activities as a function of "cooling" time was used to calculate the end-of-beam activity for that isotope.  This activity $A_0$ was then used to calculate a cross section (for the lanthanum foil data) or a beam current (for the copper/aluminum foil data).  The energy assignments for each foil were determined using a variation of parameters approach, discussed in section \ref{monitors}.
 
 \subsection{Peak Fitting}
 
@@ -209,18 +216,18 @@ F_{peak}(i) &= m\cdot i + b + A\cdot [\exp (-\frac{(i-\mu)^2}{2\sigma^2}) \\
 \end{align*}
 
 
-An example of a measured $\gamma$-ray spectrum is shown if Fig. \ref{fig:peak_fit}, with photo-peak fits superimposed on the spectrum.
+An example of a measured $\gamma$-ray spectrum is shown if Fig. \ref{fig:peak_fit}, with photopeak fits superimposed on the spectrum.
 
 \subsection{Determining Foil Activities}
 \label{eob_activities}
 
-For a single photopeak having $N_c$ counts observed with efficiency $\epsilon$ from a radioactive nucleus with decay constant $\lambda$ and intensity $I_{\gamma}$, equation \ref{eq:activity} can be used to calculate the end-of-beam activity for a given isotope.  However, if multiple photopeaks are to be used in the calculation, the activity in a photopeak at some cooling time $t_c$ after the end-of-beam can be calculated by
+For a single photopeak having $N_c$ counts observed with efficiency $\epsilon$ from a radioactive nucleus with decay constant $\lambda$ and intensity $I_{\gamma}$, equation \ref{eq:activity} can be used to calculate the end-of-beam (EOB) activity for a given isotope.  However, if multiple photopeaks are to be used in the calculation, we must first calculate the foil activities measured in each spectrum, and then fit these activities to to an exponential to calculate the end-of-beam activity $A_0$. The activity in a photopeak at some cooling time $t_c$ after the end-of-beam is given by by
 
 \begin{equation}
 A(t_c) = \frac{\lambda N_c}{(1-e^{-\lambda t_m})I_{\gamma}\epsilon}
 \end{equation}
 
-where $t_m$ is the measurement time.  The end-of-beam activity $A_0$ can then be calculated by a Levenberg Marquardt fit to the equation
+where $t_m$ is the measurement time.  The activity $A_0$ can then be calculated using a Levenberg Marquardt fit to the equation
 
 \begin{equation}
 A(t_c) = A_0e^{-\lambda t_c}
@@ -236,18 +243,18 @@ This method is much more robust to outliers, and will significantly reduce the u
 \label{fig:decay_curves}
 \end{figure}
 
-However not all of the isotopes measured in this experiment follow the simple one-step decay pathway.  $^{134}$Ce for example, decays to $^{134}$La which then decays to $^{134}$Ba, which is stable.  For these two-step decay chains, the decay curve will be of the shape
+However equation \ref{eq:decay} is only valid for single-step decay pathways, yet certain isotopes measured in this experiment have multi-step decays.  $^{134}$Ce for example, decays to $^{134}$La which then decays to $^{134}$Ba, which is stable.  For these two-step decay chains, the decay curve will take the form
 
 \begin{equation}
 A_D(t_c) = A_{p0}\frac{\lambda_D}{\lambda_D - \lambda_p}(e^{-\lambda_p t_c}-e^{-\lambda_D t_c})+A_{D0}e^{-\lambda_D t_c}
 \end{equation}
 
-where the subscript $p$ indicates the parent isotope and $D$ the daughter.  This required an estimation of the initial parent activity $A_{p0}$ using a fit to equation \ref{eq:decay}, which somewhat increased the uncertainty in the calculation of the initial daughter activities.
+where the subscript $p$ indicates the parent isotope and $D$ the daughter.  This calculation of the EOB activities required an estimation of the initial parent activity $A_{p0}$, again using a fit to equation \ref{eq:decay}, which somewhat increased the uncertainty in the calculation of the initial daughter activities.  However, most reaction product activities were still measured to better than 5\% relative uncertainty.
 
 \subsection{Current Monitors and Energy Assignments}
 \label{monitors}
 
-The proton beam current on each foil for a given monitor reaction channel can be calculated according to equation \ref{eq:beam_current}, where the activity $A_0$ is determined from the decay curves as previously described.  Measured currents for the three copper monitor reactions and the two aluminum reactions are plotted in Fig. \ref{fig:beam_current}, as well as a linear fit to these values. This fit was used to interpolate the beam current witnessed by the lanthanum foils.  As the beam didn't react greatly in the thin foils, the current was roughly constant through the stack. There was no underlying assumption justifying a linear fit, it simply gave the best reduced $\chi^2$ for the interpolation.
+The proton beam current on each foil for a given monitor reaction channel can be calculated according to equation \ref{eq:beam_current}, where the activity $A_0$ is determined from the decay curves as previously described.  Measured currents for the three copper monitor reactions and the two aluminum reactions are plotted in Fig. \ref{fig:beam_current}, as well as a linear fit to these values. This fit was used to interpolate the beam current witnessed by the lanthanum foils.  As the beam didn't react greatly in the thin foils, the current was roughly constant through the stack. There was no underlying assumption justifying a linear fit, it was chosen simply because it gave the smallest $\chi^2_{\nu}$ value for the interpolation.
 
 \begin{figure}[htb]
 \includegraphics[width=9cm]{monitors/current_norm_mcnp}
@@ -256,11 +263,11 @@ The proton beam current on each foil for a given monitor reaction channel can be
 \label{fig:beam_current}
 \end{figure}
 
-As can be seen in the plot the uncertainty in both aluminum monitor reactions was rather large, particularly in the $^{27}$Al(p,$\alpha$pn)$^{22}$Na reaction.  This was due to contaminating reactions in the Kapton tape that sealed the foils, $^{28}$Si(p,$\alpha$2pn)$^{22}$Na and $^{28}$Si(p,4pn)$^{24}$Na, which had to be corrected for.  This correction was performed by measuring the activities of the $^{22}$Na and $^{24}$Na isotopes in the Kapton sealing the neighboring lanthanum and copper foils, and subtracting this contribution from the aluminum foil data.
+As can be seen in the plot the uncertainty in both aluminum monitor reactions was rather large, particularly in the $^{27}$Al(p,$\alpha$pn)$^{22}$Na reaction.  This was due to contaminating reactions in the Kapton tape that sealed the foils ($^{28}$Si(p,$\alpha$2pn)$^{22}$Na and $^{28}$Si(p,4pn)$^{24}$Na) which had to be corrected for.  This correction was performed by measuring the activities of the $^{22}$Na and $^{24}$Na isotopes in the Kapton sealing the neighboring lanthanum and copper foils, and subtracting this contribution from the aluminum foil data.
 
-Secondary neutron production could have also contributed to $^{22,24}$Na activation, however the measured activities weren't consistent with neutron activation. Also, the secondary neutron flux predicted by our MCNP model was 3-4 orders of magnitude lower than the proton flux, so we don't have reason to believe it affected the measured beam currents \cite{MCNP}.
+Secondary neutron production could have also contributed to $^{22,24}$Na activation, however the measured activities weren't consistent with neutron activation. Also, the secondary neutron flux predicted by an MCNP model of the experiment was 3-4 orders of magnitude lower than the proton flux, so we don't have reason to believe it affected the measured beam currents \cite{MCNP}.
 
-As mentioned previously, the beam currents measured in each monitor foil reaction channel were were determined using the flux-averaged cross sections, given by equation \ref{eq:avg_xs}.  This accounted for the fact that the beam had significant energy spread, particularly toward the back of the stack, and the reaction cross-sections were often not smoothly varying.  $\psi(E)$ was determined using an Anderson-Ziegler model \cite{ZIEGLER20101818}.  A plot showing the flux spectra for each foil in the stack, as predicted by Anderson-Ziegler, is shown in figure \ref{fig:az_spectrum}.
+As mentioned previously, the beam currents measured in each monitor foil reaction channel were were determined using the flux-averaged cross sections, given by equation \ref{eq:avg_xs}.  This accounted for the fact that the beam had significant energy spread, particularly toward the back of the stack, and the reaction cross-sections were often not smoothly varying.  $\psi(E)$ was determined using an Anderson-Ziegler based Monte Carlo model \cite{ZIEGLER20101818}.  A plot showing the flux spectra for each foil in the stack, as predicted by Anderson-Ziegler, is shown in figure \ref{fig:az_spectrum}.
 
 \begin{figure}[htb]
 \includegraphics[width=9cm]{monitors/La_az_spectrum}
@@ -271,7 +278,7 @@ As mentioned previously, the beam currents measured in each monitor foil reactio
 
 \subsection{Optimization of Energy Assignments}
 
-The energy centroids and 1 $\sigma$ values were first estimated using the Anderson-Ziegler output, however there was a large spread in the apparent beam current values seen by each monitor reaction channel.  This spread was particularly high for the foils on the low energy side of the stack, which was where the monitor cross sections varied the most.  This was indicative of incorrect characterization of the proton energy spectra incident on each monitor foil.
+The energy centroids and 1$\sigma$ values were first estimated using the Anderson-Ziegler output, however there was a large spread in the apparent beam current values seen by each monitor reaction channel.  This spread was particularly high for the foils on the low energy side of the stack, which was where the monitor cross sections varied the most.  This was indicative of incorrect characterization of the proton energy spectra incident on each monitor foil.
 
 In order to correct for this effect, the effective areal density of the degrader foils and the incident proton beam energy were treated as free parameters, and were varied in order to find the energy assignments yielding the smallest variance in the beam current \cite{GRAVES201644}.
 
@@ -284,17 +291,17 @@ It's important to note that this treatment doesn't imply that the degrader densi
 \label{fig:minimization}
 \end{figure}
 
-Figure \ref{fig:minimization} shows the results of the minimization at an incident proton energy of 57 MeV.  The reduced $\chi^2$ of the linear fit to the monitor foil currents (shown in Fig \ref{fig:beam_current}) was used to determine the optimum energy assignments, given by the Anderson-Ziegler model with varied degrader foil densities.  $\chi^2_{\nu}$ was preferred over other figures of merit because the aluminum monitor channels had large uncertainties, and would have otherwise overly contributed to the resulting energy assignments.
+Figure \ref{fig:minimization} shows the results of the minimization at an incident proton energy of 57 MeV.  The reduced $\chi^2$ of the linear fit to the monitor foil currents (shown in Fig \ref{fig:beam_current}) was used to determine the optimum energy assignments, given by the Anderson-Ziegler model with varied degrader foil densities.  $\chi^2_{\nu}$ was preferred over other figures of merit because the aluminum monitor channels had large uncertainties, and otherwise would have overly contributed to the resulting energy assignments.
 
-The results of this minimization show that the optimum energy assignments correspond to no change in the effective areal density of the stack, however they do show that the incident proton beam energy was 57 MeV, rather than the expected 60 MeV.  This was a surprisingly large deviation from the initial estimates.  The incident proton beam energy could have been affected by a number of experimental factors.  This was the highest energy proton beam to date at the LBNL 88" cyclotron, and the main magnetic field may be less well characterized for this tune.  Also, the transmission out of the cyclotron was very poor, about 0.1\%.  It could be that the portion of the beam that was extracted wasn't at the expected energy, and that the deflector fields weren't set high enough to extract the 60 MeV portion of the beam.
+The results of this minimization show that the optimum energy assignments correspond to a 1.5 \% change in the effective areal density of the stack. However, they also show that the incident proton beam energy was 57 MeV, rather than the expected 60 MeV, a surprisingly large deviation from the initial estimates.  The incident proton beam energy could have been affected by any number of experimental factors.  This was the highest energy proton beam to date at the LBNL 88" cyclotron, and the main magnetic field may be less well characterized for this tune.  Also, the transmission out of the cyclotron was very low, about 0.1\%.  It could be that the portion of the beam that was extracted wasn't at the expected energy, and that the deflector fields weren't set high enough to extract 60 MeV protons.
 
 %As for the 15\% deviation from the expected areal density, this could be attributed to a measurement error (of the foil densities), or a modelling error.  Interestingly, an Anderson and Ziegler (SRIM/TRIM) calculation gave optimum energy assignments for 0\% deviation, which means that something may have been wrong with either the MCNP input, or the data it uses.
 
-The minimization was also performed with the Monte Carlo code MCNP \cite{MCNP}.  This yielded the same energy assignments, however the optimum change in areal density predicted by the MCNP model was 15\%, which suggests an error in either the MCNP input, or the stopping power tables used by MCNP.
+The minimization technique was also performed with the Monte Carlo code MCNP \cite{MCNP}.  This yielded the same energy assignments, however the optimum change in areal density predicted by the MCNP model was an increase of 15\%, suggesting an error in either the MCNP input or the stopping power tables used by MCNP. These results are omitted here, but may be further investigated in the future.  
 
 \section{Results and Discussion}
 
-Using the end-of-beam activities, beam currents, and energy assignments determined in the previous section, the cross sections were calculated according to equation \ref{eq:xs_calc}.  These measured results were compared to predictions from the TALYS and EMPIRE nuclear reaction codes using default parameters.  The pre-equillibrium model used in the EMPIRE calculations was the Hybrid Monte-Carlo Simulation module (HMS), while the TALYS code uses the exciton pre-equillibrium model \cite{HERMAN20072655, TALYS}. The results of these cross section measurements are described in more detail below, and the measured values are tabulated in Appendix \ref{xs_appendix}.
+Using the end-of-beam activities, beam currents, and energy assignments determined in the previous section, the cross sections were calculated according to equation \ref{eq:xs_calc}.  These measured results were compared to predictions from the TALYS, EMPIRE and ALICE nuclear reaction codes using default parameters.  The pre-equillibrium model used in the EMPIRE calculations was the Hybrid Monte-Carlo Simulation module (HMS), while the TALYS and ALICE codes use the exciton pre-equillibrium model \cite{HERMAN20072655, TALYS, ALICE}. The results of these cross section measurements are described in more detail below, and the measured values are tabulated in Appendix \ref{xs_appendix}.
 
 \subsection{$^{nat}$La(p,6n)$^{134}$Ce Cross Section}
 
@@ -304,25 +311,25 @@ Additionaly, $^{135}$Ce produces multiple decay $\gamma$'s very close in energy 
 
 \begin{figure}[htb]
 \includegraphics[width=9cm]{cross_sections/134CE}
-\caption{Measured cross section for the $^{nat}$La(p,6n)$^{134}$Ce reaction, with TALYS (solid blue) and EMPIRE (dashed red) predictions.  Note that the TALYS calculation has been divided by 10.
+\caption{Measured cross section for the $^{nat}$La(p,6n)$^{134}$Ce reaction, with TALYS (solid blue), EMPIRE (dashed red) and ALICE (dashed purple) predictions.  Note that the TALYS and ALICE calculations have been divided by 10.
 }
 \label{fig:134CE}
 \end{figure}
 
-The measured cross sections are plotted in Fig. \ref{fig:134CE}, along with the outputs of the TALYS and EMPIRE nuclear reaction codes using default settings.  Clearly the hybrid Monte Carlo simulation (HMS) pre-equillibrium model used by EMPIRE gives much better agreement with measured data than the exciton model used by TALYS.  This was not the case for all the measured reaction channels, and this dispersion is likely attributable to the fact that this reaction has not been measured in the pre-equillibrium energy range prior to this work, and so default parameters shouldn't be expected to give reliable results without some adjustment.
+The measured cross sections are plotted in Fig. \ref{fig:134CE}, along with the outputs of the TALYS, EMPIRE and ALICE nuclear reaction codes using default settings.  Clearly the hybrid Monte Carlo simulation (HMS) pre-equillibrium model used by EMPIRE gives much better agreement with measured data than the exciton model used by TALYS and ALICE.  This was not the case for all the measured reaction channels, and this dispersion is likely attributable to the fact that this reaction has not been measured in the pre-equillibrium energy range prior to this work, and so default parameters shouldn't be expected to give reliable results without some adjustment.
 
 \subsection{$^{nat}$La(p,5n)$^{135}$Ce Cross Section}
 
-The $^{nat}$La(p,5n)$^{135}$Ce reaction was perhaps the most amenable of those measured to the stacked foil activation technique, due to a high number of intense $\gamma$ emissions (e.g. 41.8\% for the 265.56 keV line) and 17.7 hour half-life.  As such these emissions tended to dominate most of the $\gamma$ spectra taken earlier in time, giving good statistics on this cross section.  Unfortunately, the 20 second isomer was too weak to measure by the time the foils had been transferred to the counting lab, so the reported cross sections are cumulative.  The uncertainties were on the order of 6\%, of which roughly 3\% came from the $I_{\gamma}$'s given by NUDAT and 1\% from the half-life.  
+The $^{nat}$La(p,5n)$^{135}$Ce reaction was perhaps the most amenable of those measured to the stacked foil activation technique, due to a high number of intense $\gamma$ emissions (e.g. 41.8\% for the 265.56 keV line) and 17.7 hour half-life.  As such these emissions tended to dominate most of the $\gamma$ spectra taken earlier in time, giving good statistics on this cross section.  Unfortunately, the 20 second isomer had completely decayed by the time the foils had been transferred to the counting lab, so the reported cross sections for this reaction are cumulative.  The uncertainties were on the order of 6\%, of which roughly 3\% came from the $I_{\gamma}$'s given by ENSDF \cite{ensdf} and 1\% from the half-life.  
 
 \begin{figure}[htb]
 \includegraphics[width=9cm]{cross_sections/135CE}
-\caption{Measured cross section for the $^{nat}$La(p,5n)$^{135}$Ce reaction, with TALYS (solid blue) and EMPIRE (dashed red) predictions.
+\caption{Measured cross section for the $^{nat}$La(p,5n)$^{135}$Ce reaction, with TALYS (solid blue), EMPIRE (dashed red) and ALICE (dashed purple) predictions.
 }
 \label{fig:135CE}
 \end{figure}
 
-The measured cross sections are plotted in Fig. \ref{fig:135CE}, along with the outputs of the TALYS and EMPIRE nuclear reaction codes using default settings.  While both codes approximately predicted the magnitude of this cross section, the energy at which it peaks is clearly mis-calculated by the TALYS exiton model.
+The measured cross sections are plotted in Fig. \ref{fig:135CE}, along with the outputs of the TALYS, EMPIRE and ALICE nuclear reaction codes using default settings.  While both codes approximately predicted the magnitude of this cross section, the energy at which it peaks is clearly mis-calculated by the TALYS and ALICE exiton models.
 
 \subsection{$^{nat}$La(p,3n)$^{137m,137g}$Ce Cross Sections}
 
@@ -330,45 +337,45 @@ The decays of both the 34.4 hour isomer and the 9.0 hour ground state in $^{137}
 
 \begin{figure}[htb]
 \includegraphics[width=9cm]{cross_sections/137CEm}
-\caption{Measured cross section for the $^{nat}$La(p,3n)$^{137m}$Ce reaction, with TALYS (solid blue) and EMPIRE (dashed red) predictions.
+\caption{Measured cross section for the $^{nat}$La(p,3n)$^{137m}$Ce reaction, with TALYS (solid blue), EMPIRE (dashed red) and ALICE (dashed purple) predictions.
 }
 \label{fig:137CEm}
 \end{figure}
 
-The measured cross sections for the $^{nat}$La(p,3n)$^{137m}$Ce reaction are plotted in Fig. \ref{fig:137CEm}, as well as the TALYS and EMPIRE default outputs.  The $^{nat}$La(p,3n)$^{137g}$Ce cross sections are plotted in Fig. \ref{fig:137CEg}.  In neither case is there a clear "best fit" in the models.  Both agree much better than in the (p,5n) or (p,6n) reactions, and likely an adjustment of the level density model or spin-cutoff parameters would bring the calculations into agreement with the data.
+The measured cross sections for the $^{nat}$La(p,3n)$^{137m}$Ce reaction are plotted in Fig. \ref{fig:137CEm}, as well as the TALYS, EMPIRE and ALICE default outputs.  The $^{nat}$La(p,3n)$^{137g}$Ce cross sections are plotted in Fig. \ref{fig:137CEg}.  In neither case is there a clear "best fit" among the models.  Both agree much better than in the (p,5n) or (p,6n) reactions, and likely an adjustment of the level density model or spin-cutoff parameters would bring the calculations into agreement with the data.
 
 \begin{figure}[htb]
 \includegraphics[width=9cm]{cross_sections/137CEg}
-\caption{Measured cross section for the $^{nat}$La(p,3n)$^{137g}$Ce reaction, with TALYS (solid blue) and EMPIRE (dashed red) predictions.
+\caption{Measured cross section for the $^{nat}$La(p,3n)$^{137g}$Ce reaction, with TALYS (solid blue), EMPIRE (dashed red) and ALICE (dashed purple) predictions.
 }
 \label{fig:137CEg}
 \end{figure}
 
 \subsection{$^{nat}$La(p,n)$^{139}$Ce Cross Section}
 
-Measurement of the direct reaction was possible using the 80 \%, 165.85 keV $\gamma$ emission from the $^{139}$Ce ground state decay.  This was a cumulative cross section measurement, as the 58 second isomer decayed to a negligible activity before it was able to be counted with the HPGe detector.
+Measurement of the direct reaction (p,n) was possible using the 80 \%, 165.85 keV $\gamma$ emission from the $^{139}$Ce ground state decay.  This was a cumulative cross section measurement, as the 58 second isomer decayed to a negligible activity before it was able to be counted with the HPGe detector.
 
 \begin{figure}[htb]
 \includegraphics[width=9cm]{cross_sections/139CE}
-\caption{Measured cross section for the $^{nat}$La(p,n)$^{139}$Ce reaction, with TALYS (solid blue) and EMPIRE (dashed red) predictions.
+\caption{Measured cross section for the $^{nat}$La(p,n)$^{139}$Ce reaction, with TALYS (solid blue), EMPIRE (dashed red) and ALICE (dashed purple) predictions.
 }
 \label{fig:139CE}
 \end{figure}
 
-The measured cross sections for the $^{nat}$La(p,n)$^{139}$Ce reaction are plotted in Fig. \ref{fig:139CE}, along with the TALYS and EMPIRE default outputs.  Both models seem to approximately predict the shape of the cross section, only being off by a constant multiplier.  An adjustment of the level density model could bring these into agreement \cite{BRINK1957215}.
+The measured cross sections for the $^{nat}$La(p,n)$^{139}$Ce reaction are plotted in Fig. \ref{fig:139CE}, along with the TALYS, EMPIRE and ALICE default outputs.  All three models seem to approximately predict the shape of the cross section, only being off by a constant multiplier.  An adjustment of the level density model could bring these into agreement \cite{BRINK1957215}.
 
 \subsection{$^{nat}$La(p,x)$^{132}$Cs Cross Section}
 
-Despite only producing activities on the order of 1-2 Bq, the $^{nat}$La(p,x)$^{132}$Cs reaction was measureable because its 6.48 day activity was longer than that of most isotopes measured in this study, and because the 97.59 \%, 667.71 keV $\gamma$ line was well isolated and could be counted for multiple days.
+Despite only producing activities on the order of 1-2 Bq, the $^{nat}$La(p,x)$^{132}$Cs reaction was measureable because its 6.48 day activity was longer lived than of most isotopes measured in this study, and because the 97.59 \%, 667.71 keV $\gamma$ line was well isolated and could be counted for multiple days.
 
 \begin{figure}[htb]
 \includegraphics[width=9cm]{cross_sections/132CS}
-\caption{Measured cross section for the $^{nat}$La(p,x)$^{132}$Cs reaction, with TALYS (solid blue) and EMPIRE (dashed red) predictions.
+\caption{Measured cross section for the $^{nat}$La(p,x)$^{132}$Cs reaction, with TALYS (solid blue), EMPIRE (dashed red) and ALICE (dashed purple) predictions.  Note that the EMPIRE calculation has been divided by 20.
 }
 \label{fig:132CS}
 \end{figure}
 
-Fig. \ref{fig:132CS} plots the measured $^{nat}$La(p,x)$^{132}$Cs cross sections, as well as the TALYS and EMPIRE default calculations.  EMPIRE defaults over-predicted this cross section by a factor greater than 20, whereas the TALYS calculation was very close to what was measured.  This discrepancy isn't too surprising as this reaction takes up only a small fraction of the total cross section, and small model adjustments will have a large relative impact on the prediction \cite{KONING2003231}.
+Fig. \ref{fig:132CS} plots the measured $^{nat}$La(p,x)$^{132}$Cs cross sections, as well as the TALYS, EMPIRE and ALICE default calculations.  EMPIRE defaults over-predicted this cross section by a factor greater than 20, whereas the TALYS calculation was very close to what was measured.  This discrepancy isn't too surprising as this reaction takes up only a small fraction of the total cross section, and small model adjustments will have a large relative impact on the prediction \cite{KONING2003231}.
 
 \subsection{$^{nat}$La(p,x)$^{133m,133g}$Ba Cross Sections}
 
@@ -376,21 +383,21 @@ Another reaction where the decays of both the isomer and ground state were obser
 
 \begin{figure}[htb]
 \includegraphics[width=9cm]{cross_sections/133BAg}
-\caption{Measured cross section for the $^{nat}$La(p,x)$^{133}$Ba reaction, with TALYS (solid blue) and EMPIRE (dashed red) predictions.
+\caption{Measured cross section for the $^{nat}$La(p,x)$^{133}$Ba reaction, with TALYS (solid blue), EMPIRE (dashed red) and ALICE (dashed purple) predictions.
 }
 \label{fig:133BAg}
 \end{figure}
 
-Fig. \ref{fig:133BAg} plots the measured $^{nat}$La(p,x)$^{133g}$Ba reaction cross sections, as well as the TALYS and EMPIRE default calculations.  The relative uncertainties were very large in this channel: the 1$\sigma$ error bars are zero crossing.  However it can be said that this cross section was much smaller than the prediction of either code.
+Fig. \ref{fig:133BAg} plots the measured $^{nat}$La(p,x)$^{133g}$Ba reaction cross sections, as well as the TALYS, EMPIRE and ALICE default calculations.  The relative uncertainties were very large in this channel: the 1$\sigma$ error bars are zero crossing.  However it can be said that this cross section was much smaller than the prediction of either TALYS or EMPIRE.  ALICE calculated $<<$1 mb cross section across the energy range, which seems to be the closest match to the measurements.
 
 \begin{figure}[htb]
 \includegraphics[width=9cm]{cross_sections/133BAm}
-\caption{Measured cross section for the $^{nat}$La(p,x)$^{133m}$Ba reaction, with TALYS (solid blue) and EMPIRE (dashed red) predictions.
+\caption{Measured cross section for the $^{nat}$La(p,x)$^{133m}$Ba reaction, with TALYS (solid blue), EMPIRE (dashed red) and ALICE (dashed purple) predictions.
 }
 \label{fig:133BAm}
 \end{figure}
 
-Fig. \ref{fig:133BAm} plots the measured cross sections for the $^{nat}$La(p,x)$^{133m}$Ba reaction, and TALYS/EMPIRE default calculations.  This measurement was much more precise due to the better counting statistics from the 275.92 keV line.  Here again the EMPIRE code better predicts the energy of the peak of the cross section, however neither code very accurately predicted the magnitude.
+Fig. \ref{fig:133BAm} plots the measured cross sections for the $^{nat}$La(p,x)$^{133m}$Ba reaction, and TALYS/EMPIRE/ALICE default calculations.  This measurement was much more precise due to the better counting statistics from the 275.92 keV line.  Here again the EMPIRE code better predicted the energy of the peak of the cross section, however none of the three codes very accurately predicted the magnitude.
 
 \subsection{$^{nat}$La(p,x)$^{135}$La Cross Section}
 
@@ -398,12 +405,12 @@ The final cross section measured in the Lanthanum stack was in the $^{nat}$La(p,
 
 \begin{figure}[htb]
 \includegraphics[width=9cm]{cross_sections/135LA}
-\caption{Measured cross section for the $^{nat}$La(p,x)$^{135}$La reaction, with TALYS (solid blue) and EMPIRE (dashed red) predictions.
+\caption{Measured cross section for the $^{nat}$La(p,x)$^{135}$La reaction, with TALYS (solid blue), EMPIRE (dashed red) and ALICE (dashed purple) predictions.
 }
 \label{fig:135LA}
 \end{figure}
 
-Fig. \ref{fig:135LA} plots the measured cross sections for the $^{nat}$La(p,x)$^{135}$La reaction, and TALYS/EMPIRE default calculations.  The EMPIRE model accurately predicts both the shape and magnitude of this cross section, whereas TALYS seems to be predicting the peak of the cross section at lower energy similar to the other reactions.  There are some fluctuations in the EMPIRE predictions, which are likely due to the non-deterministic nature of the pre-equillibrium model it is using \cite{HERMAN20072655}.
+Fig. \ref{fig:135LA} plots the measured cross sections for the $^{nat}$La(p,x)$^{135}$La reaction, and TALYS/EMPIRE/ALICE default calculations.  The EMPIRE model accurately predicts both the shape and magnitude of this cross section, whereas TALYS seems to be predicting the peak of the cross section at lower energy similar to the other reactions.  There are some fluctuations in the EMPIRE predictions, which are likely due to the non-deterministic nature of the pre-equillibrium model it is using \cite{HERMAN20072655}.
 
 \subsection{$^{nat}$Cu(p,x)$^{61}$Cu Cross Section}
 
@@ -416,16 +423,16 @@ The 282.9 keV $\gamma$ line (12.2 \%) from the $^{61}$Cu isotope was observed in
 \label{fig:61CU}
 \end{figure}
 
-The measured cross sections for the $^{nat}$Cu(p,x)$^{61}$Cu reaction are plotted in Fig. \ref{fig:61CU}, along with measurements done in previous experiments that have submitted entries into the EXFOR database.  There is clear agreement with the measurements from EXFOR, both in the shape and magnitude of the cross sections measured in this experiment.  This provides confidence in the proton current measured by the monitor foils, the energy assignments as determined by the minimization technique, as well as the overall measurement and data reduction methodology.
+The measured cross sections for the $^{nat}$Cu(p,x)$^{61}$Cu reaction are plotted in Fig. \ref{fig:61CU}, along with previous measurements that have been submitted to the EXFOR database.  There is clear agreement with the measurements from EXFOR, both in the shape and magnitude of the cross sections measured in this experiment.  This provides confidence in the proton current calculated by the monitor foils, the energy assignments as determined by the minimization technique, as well as the overall measurement and data reduction methodology.
 
 
 \section{Summary and Conclusions}
-In this experiment we measured the cross sections for various $^{nat}$La(p,x) reactions using a 57 MeV proton beam at the LBNL 88" cyclotron and a stacked foil target.  We also compared these measurements with the outputs of the TALYS and EMPIRE nuclear reaction modelling codes, using default parameters.  In most cases neither code accurately predicted the magnitude of the cross sections, but TALYS consistently underpredicted the energy of the peak in the cross section, whereas the EMPIRE predictions agreed with the shape of the measured cross sections quite well.  This primarily speaks to the fidelity of the pre-equillibrium models used by the respective codes: the hybrid Monte Carlo simulation model typically produced better predictions than the exiton model.
+In this experiment we measured the cross sections for various $^{nat}$La(p,x) reactions using a 60 MeV proton beam at the LBNL 88" cyclotron and a stacked foil target.  We also compared these measurements with the outputs of the TALYS, EMPIRE and ALICE nuclear reaction modelling codes, using default parameters.  In most cases all three codes had difficulty reproducing the magnitude of the cross sections, but TALYS and ALICE consistently underpredicted the energy of the peak in the cross section, whereas the EMPIRE predictions tended to agree with the shape of the measured cross sections quite well.  This primarily speaks to the fidelity of the pre-equillibrium models used by the respective codes: the hybrid Monte Carlo simulation model typically produced better predictions than the exiton model.
 
-Particular emphasis was placed on the production of $^{134}$Ce, an isotope with applications as a positron emitting analogue of the medically relevant $^{225}$Ac isotope.  The results of this study show that in order to produce significant quantities of $^{134}$Ce from the $^{nat}$La(p,6n) reaction a higher energy proton beam is required.  The highest energy proton beam availible at the LBNL 88" cyclotron (57 MeV) produces an unacceptable activity of other Cerium isotopes, which will act as impurities in a medical study.  A proton beam of at least 70 MeV will be required to produce significant activities of $^{134}$Ce without contaminants.
+Particular emphasis was placed on the production of $^{134}$Ce, an isotope with applications as a positron emitting analogue of $^{225}$Ac, a promising medical isotope.  The results of this study show that in order to produce significant quantities of $^{134}$Ce from the $^{nat}$La(p,6n) reaction, a higher energy proton beam is required.  The highest energy proton beam availible at the LBNL 88" cyclotron (60 MeV) produces an unacceptable activity of other Cerium isotopes, which will act as impurities in a medical study.  A proton beam of at least 70 MeV will be required to produce significant activities of $^{134}$Ce without major contaminants.
 
 \section*{Acknowledgements}
-We wish to acknowledge our thanks to the operators of the 88" cyclotron: Brien Ninemire, Nick Brickner, Tom Gimpel and Scott Small for their efforts in setting a new "high-water mark" for the maximum proton energy extracted from the machine.  This work has been performed under the auspices of the U.S. Department of Energy by Lawrence Berkeley National Laboratory under contract No. LAB16-1588 NSD.
+We wish to acknowledge our thanks to the operators of the 88" cyclotron: Brien Ninemire, Nick Brickner, Tom Gimpel and Scott Small for their efforts in setting a new "high-water mark" for the maximum proton energy extracted from the machine.  We would also like to thank those from the LBNL Nuclear Data group and the Nuclear Engineering department at UC Berkeley who contributed their time and knowledge towards the review of this experiment. This work has been performed under the auspices of the U.S. Department of Energy by Lawrence Berkeley National Laboratory under contract No. LAB16-1588 NSD.
 \bibliography{LaCe}
 
 \input{../data/cross_sections/la139_XS.tex}
@@ -438,21 +445,21 @@ We wish to acknowledge our thanks to the operators of the 88" cyclotron: Brien N
 \begin{tabular}{cccc}
 Isotope & $\gamma$ Energy (keV) & $I_{\gamma}$ (\%) & $T_{1/2}$ \\
 $^{134}$Ce & - & - & 3.16 (4) d \\
-$^{134}$La & 604.721 & 5.04 (20) & 6.45 (16) s \\
-$^{135}$Ce & 265.56 & 41.8 (14) & 17.7 (3) h \\
-$^{137m}$Ce & 254.29 & 11.1 (4) & 34.4 (3) h \\
-$^{137g}$Ce & 447.15 & 1.68 (?) & 9.0 (3) h \\
-$^{139g}$Ce & 165.85 & 80.0 (?) & 137.64 (2) d \\
-$^{135}$La & 480.51 & 1.52 (?) & 19.5 (2) h \\
-$^{133m}$Ba & 275.925 & 17.69 (?) & 38.93 (1) h \\
-$^{133g}$Ba & 356.013 & 62.05 (?) & 10.551 (11) y \\
-$^{132}$Cs & 667.714 & 97.59 (?) & 6.480 (6) d \\
-$^{61}$Cu & 282.956 & 12.2 (?) & 3.339 (8) h \\
-$^{62}$Zn & 596.56 & 26.0 (?) & 9.193 (15) h \\
-$^{63}$Zn & 669.62 & 8.2 (?) & 38.47 (5) m \\
-$^{58}$Co & 810.759 & 99.45 (?) & 70.86 (6) d \\
-$^{22}$Na & 1274.537 & 99.940 (14) & 2.6018 (22) y \\
-$^{24}$Na & 1368.626 & 99.9936 (15) & 14.997 (12) h \\
+$^{134}$La & 604.721 (2) & 5.04 (20) & 6.45 (16) s \\
+$^{135}$Ce & 265.56 (2) & 41.8 (14) & 17.7 (3) h \\
+$^{137m}$Ce & 254.29 (5) & 11.1 (4) & 34.4 (3) h \\
+$^{137g}$Ce & 447.15 (8) & 1.68 (?) & 9.0 (3) h \\
+$^{139g}$Ce & 165.8575 (11) & 80.0 (?) & 137.64 (2) d \\
+$^{135}$La & 480.51 (2) & 1.52 (?) & 19.5 (2) h \\
+$^{133m}$Ba & 275.925 (7) & 17.69 (?) & 38.93 (1) h \\
+$^{133g}$Ba & 356.0129 (7) & 62.05 (?) & 10.551 (11) y \\
+$^{132}$Cs & 667.714 (2) & 97.59 (?) & 6.480 (6) d \\
+$^{61}$Cu & 282.956 (10) & 12.2 (?) & 3.339 (8) h \\
+$^{62}$Zn & 596.56 (13) & 26.0 (?) & 9.193 (15) h \\
+$^{63}$Zn & 669.62 (5) & 8.2 (?) & 38.47 (5) m \\
+$^{58}$Co & 810.7593 (20) & 99.45 (?) & 70.86 (6) d \\
+$^{22}$Na & 1274.537 (7) & 99.940 (14) & 2.6018 (22) y \\
+$^{24}$Na & 1368.626 (5) & 99.9936 (15) & 14.997 (12) h \\
 \end{tabular}
 \label{table:stack}
 \end{ruledtabular}

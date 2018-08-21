@@ -11,6 +11,10 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: writeupNotes.bib
 Database file #2: LaCe.bib
+You're missing a field part---line 240 of file LaCe.bib
+ : number = 
+ :          ,
+I'm skipping whatever remains of this entry
 control{REVTEX41Control}, control.key{N/A}, control.author{N/A}, control.editor{N/A}, control.title{N/A}, control.pages{N/A}, control.year{N/A}, control.eprint{N/A}, 
 control{apsrev41Control}, control.key{N/A}, control.author{08}, control.editor{1}, control.title{}, control.pages{0}, control.year{1}, control.eprint{N/A}, 
 Warning--jnrlst (dependency: not reversed) set 1
@@ -234,45 +238,47 @@ Too many commas in name 1 of "J.T. Goorley, M.R. James, T.E. Booth, F.B. Brown, 
 while executing---line 3445 of file apsrev4-1.bst
 Too many commas in name 1 of "J.T. Goorley, M.R. James, T.E. Booth, F.B. Brown, J.S. Bull, L.J. Cox, J.W.J. Durkee, J.S. Elson, M.L. Fensin, R.A.I. Forster, J.S. Hendricks, H.G.I. Hughes, R.C. Johns, B.C. Kiedrowski, R.L. Martz, S.G. Mashnik, G.W. McKinney, D.B. Pelowitz, R.E. Prael, J.E. Sweezy, L.S. Waters, T. Wilcox, A.J. Zukaitis" for entry MCNP
 while executing---line 3445 of file apsrev4-1.bst
-You've used 19 entries,
+Warning--empty journal in ALICE
+Warning--empty year in ALICE
+You've used 20 entries,
             5847 wiz_defined-function locations,
-            1755 strings with 20075 characters,
-and the built_in function-call counts, 21483 in all, are:
-= -- 1122
-> -- 729
-< -- 179
-+ -- 230
-- -- 204
-* -- 3565
-:= -- 1967
-add.period$ -- 17
-call.type$ -- 19
-change.case$ -- 72
-chr.to.int$ -- 27
-cite$ -- 20
-duplicate$ -- 2022
-empty$ -- 1515
-format.name$ -- 416
-if$ -- 4243
+            1759 strings with 20138 characters,
+and the built_in function-call counts, 22193 in all, are:
+= -- 1161
+> -- 746
+< -- 184
++ -- 236
+- -- 208
+* -- 3664
+:= -- 2043
+add.period$ -- 18
+call.type$ -- 20
+change.case$ -- 76
+chr.to.int$ -- 28
+cite$ -- 23
+duplicate$ -- 2094
+empty$ -- 1572
+format.name$ -- 429
+if$ -- 4376
 int.to.chr$ -- 1
-int.to.str$ -- 26
-missing$ -- 268
-newline$ -- 103
-num.names$ -- 52
-pop$ -- 814
+int.to.str$ -- 27
+missing$ -- 277
+newline$ -- 106
+num.names$ -- 55
+pop$ -- 859
 preamble$ -- 1
-purify$ -- 85
+purify$ -- 89
 quote$ -- 0
-skip$ -- 705
+skip$ -- 728
 stack$ -- 0
-substring$ -- 429
-swap$ -- 2010
-text.length$ -- 94
+substring$ -- 441
+swap$ -- 2065
+text.length$ -- 96
 text.prefix$ -- 0
 top$ -- 10
-type$ -- 291
-warning$ -- 2
-while$ -- 58
+type$ -- 304
+warning$ -- 4
+while$ -- 60
 width$ -- 0
-write$ -- 187
-(There were 105 error messages)
+write$ -- 192
+(There were 106 error messages)
