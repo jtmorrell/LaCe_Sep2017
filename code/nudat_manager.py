@@ -66,7 +66,30 @@ class manager(object):
 					d = [i.strip() for i in ln.split(' ') if i.strip()!='']
 					self.db.execute('INSERT INTO exfor VALUES(?,?,?,?,?,?)',(istp,float(d[0]),float(d[1]),1e3*float(d[2]),1e3*float(d[3]),d[5]))
 			self.db_connection.commit()
-		print 'EXFOR updated'
+		
+		with open('../data/exfor/LA_exfor.txt') as f:
+			for block in f.read().split('//')[:-1]:
+				E,dE,X,dX,auth = [],[],[],[],[]
+				for ln in block.split('\n'):
+					if ln.startswith('#name'):
+						istp = ln.split(',')[1].split(')')[1].split('-')
+						if len(istp)==4:
+							istp = istp[2]+istp[1]+istp[3].lower()
+						else:
+							istp = istp[2]+istp[1]
+					if ln.startswith('#'):
+						continue
+					x = ln.split('##')[0].split()
+					if len(x):
+						E.append(float(x[0]))
+						dE.append(float(x[1]))
+						X.append(float(x[2]))
+						dX.append(float(x[3]))
+						auth.append(x[5])
+				for n,e in enumerate(E):
+					self.db.execute('INSERT INTO exfor VALUES(?,?,?,?,?,?)',(istp, e, dE[n], 1e3*X[n], 1e3*dX[n], auth[n]))
+				self.db_connection.commit()
+			print 'EXFOR updated'
 	def exp_smooth(self,ls,alpha=0.3):
 		R,RR,b = [ls[0]],[ls[-1]],1.0-alpha
 		for i,ii in zip(ls[1:],reversed(ls[:-1])):
@@ -173,6 +196,6 @@ if __name__ == "__main__":
 	# mn.run_empire()
 	# mn.run_talys()
 	# # mn.update_talys()
-	# mn.update_exfor()
+	mn.update_exfor()
 	# mn.update_xs_prediction()
-	mn.update_alice()
+	# mn.update_alice()

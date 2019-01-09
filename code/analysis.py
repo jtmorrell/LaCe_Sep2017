@@ -4,7 +4,17 @@ from scipy.optimize import curve_fit
 from scipy.interpolate import interp1d
 from scipy.special import erfc
 import sqlite3
-from npat import plotter
+from npat import colors
+
+plt.rcParams['font.size']='14'
+plt.rcParams['font.family']='sans-serif'
+plt.rcParams['xtick.major.pad']='8'
+plt.rcParams['ytick.major.pad']='8'
+plt.rcParams['legend.fontsize']='12'
+plt.rcParams['lines.markersize']='4.5'
+plt.rcParams['errorbar.capsize']='5.0'
+plt.rcParams['xtick.minor.visible']='True'
+plt.rcParams['ytick.minor.visible']='True'
 _mcnp_path = '/home/jmorrell/MCNP'
 _db_connection = sqlite3.connect('../data/peak_data.db')
 _db = _db_connection.cursor()
@@ -82,7 +92,8 @@ class spectrum(object):
 		self.pk_args = [(float(i[4]),float(i[5])) for i in self.db.execute('SELECT * FROM calibration WHERE distance=?',(self.distance,))][0]
 		self.SNP = self.SNIP()
 		self.isotope_list = [str(i[1]).split(',') for i in self.db.execute('SELECT * FROM sample_map WHERE sample=?',(self.sample[:2],))][0]
-		self.pallate = plotter().pallate()
+		self.pallate = {'k':'#34495e','gy':'#95a5a6','r':'#e74c3c','b':'#3498db','g':'#2ecc71',
+	'aq':'#1abc9c','o':'#e67e22','y':'#f1c40f','p':'#9b59b6','w':'#ecf0f1'}
 	def save_as_radware(self):
 		from struct import pack
 		with open('rw_files/'+self.filename+'.spe','wb') as f:
@@ -303,7 +314,8 @@ class calibration(object):
 		self.db_connection = _db_connection
 		fnms = [str(i[0]) for i in self.db.execute('SELECT * FROM all_files WHERE directory LIKE "%Calib%"')]
 		self.spectra = [spectrum(s) for s in fnms]
-		self.pallate =plotter().pallate()
+		self.pallate ={'k':'#34495e','gy':'#95a5a6','r':'#e74c3c','b':'#3498db','g':'#2ecc71',
+	'aq':'#1abc9c','o':'#e67e22','y':'#f1c40f','p':'#9b59b6','w':'#ecf0f1'}
 	def objective(self,m,b):
 		L = len(self.log_peaks[0])
 		I = [[int((e-b)/m) for e in eng] for eng in self.calib_peak_eng]
@@ -466,7 +478,8 @@ class ziegler(object):
 			if any([fl['sample'].startswith(i) for i in ['La','Cu','Al']]):
 				self.stack.append({'sample':'Silicone','compound':'Silicone','ad':self.densities['Silicone']*100.0*silicone,'density':self.densities['Silicone'],'thickness':silicone})
 				self.stack.append({'sample':'Kapton','compound':'Kapton','ad':self.densities['Kapton']*100.0*kapton,'density':self.densities['Kapton'],'thickness':kapton})
-		self.pallate = plotter().pallate()
+		self.pallate = {'k':'#34495e','gy':'#95a5a6','r':'#e74c3c','b':'#3498db','g':'#2ecc71',
+	'aq':'#1abc9c','o':'#e67e22','y':'#f1c40f','p':'#9b59b6','w':'#ecf0f1'}
 	def get_S(self,E,z2):
 		# energy E in MeV , stopping power in MeV/(mg/cm2)
 		E = 1E3*E/1.00727647
@@ -652,7 +665,8 @@ class XS_library(object):
 		self.target_ids = ['La'+('0' if n<10 else '')+str(n) for n in range(1,11)]
 		self.daughters = ['134LA','135LA','137CEg','133BAg']
 		self.measured_xs = None
-		self.pallate = plotter().pallate()
+		self.pallate = {'k':'#34495e','gy':'#95a5a6','r':'#e74c3c','b':'#3498db','g':'#2ecc71',
+	'aq':'#1abc9c','o':'#e67e22','y':'#f1c40f','p':'#9b59b6','w':'#ecf0f1'}
 		self.cal_src_err = 0.03
 	def save_as_xlsx(self):
 		from openpyxl import Workbook
@@ -698,8 +712,8 @@ class XS_library(object):
 		return {c:(str(l[n]) if n<2 else float(l[n])) for n,c in enumerate(cols)}
 	def get_exfor(self,istp,Emax=100):
 		dat = [(float(i[1]),float(i[2]),float(i[3]),float(i[4]),str(i[5])) for i in self.db.execute('SELECT * FROM exfor WHERE isotope=?',(istp,))]
-		auth = list(set([i[4] for i in dat]))
-		return {a:{'E':[d[0] for d in dat if d[4]==a and d[0]<Emax],'dE':[d[1] for d in dat if d[4]==a and d[0]<Emax],'XS':[d[2] for d in dat if d[4]==a and d[0]<Emax],'dXS':[d[3] for d in dat if d[4]==a and d[0]<Emax]} for a in auth}
+		auth = {i:'{1} ({0})'.format(i.split(',')[0],i.split(',')[1].replace('+','')).replace('.','. ') for i in list(set([i[4] for i in dat]))}
+		return {auth[a]:{'E':[d[0] for d in dat if d[4]==a and d[0]<Emax],'dE':[d[1] for d in dat if d[4]==a and d[0]<Emax],'XS':[d[2] for d in dat if d[4]==a and d[0]<Emax],'dXS':[d[3] for d in dat if d[4]==a and d[0]<Emax]} for a in auth}
 	def get_monitor(self,istp):
 		return [{'E':float(i[2]),'XS':float(i[3]),'dXS':float(i[4])} for i in self.db.execute('SELECT * FROM monitor_xs WHERE product=?',(istp,))]
 	def get_talys(self,istp):
@@ -713,8 +727,12 @@ class XS_library(object):
 		return [{'E':float(i[1]),'XS':float(i[2])} for i in self.db.execute('SELECT * FROM model_xs WHERE model=? AND isotope=?',('empire',istp))]
 	def get_prediction(self,istp):
 		return [{'E':float(i[1]),'XS':float(i[2])} for i in self.db.execute('SELECT * FROM xs_prediction WHERE isotope=?',(istp,))]
-	def interpolate(self,istp,table='talys'):
-		ls = {'talys':self.get_talys,'empire':self.get_empire,'alice':self.get_alice,'monitor':self.get_monitor,'prediction':self.get_prediction}[table](istp)
+	def get_tendl(self, istp):
+		return [{'E':x[0],'XS':x[1]} for x in [map(float,i.replace('+','').split()) for i in open('../data/tendl_2017/'+istp+'.txt').read().split('\n')[:-1] if not i.startswith('#')]]
+	def interpolate(self,istp,table='talys',smooth=False):
+		ls = {'talys':self.get_talys,'empire':self.get_empire,'alice':self.get_alice,'monitor':self.get_monitor,'prediction':self.get_prediction,'tendl':self.get_tendl}[table](istp)
+		if smooth:
+			return lambda E: np.asarray(self.exp_smooth(interp1d([i['E'] for i in ls],[i['XS'] for i in ls],bounds_error=False,fill_value='extrapolate')(E)))
 		return interp1d([i['E'] for i in ls],[i['XS'] for i in ls],bounds_error=False,fill_value='extrapolate')
 	def interpolate_unc(self,istp):
 		ls = self.get_monitor(istp)
@@ -944,20 +962,32 @@ class XS_library(object):
 			if prediction:
 				if istp in ['61CU']:
 					x4 = self.get_exfor(istp)
-					cl = plotter().pallate(shade='light')
+					cl = colors(shade='light')
 					clr_light = [cl['r'],cl['g'],cl['p'],cl['gy'],cl['o'],cl['b'],cl['aq']]
 					for n,a in enumerate(x4):
 						ax.errorbar(x4[a]['E'],x4[a]['XS'],xerr=x4[a]['dE'],yerr=x4[a]['dXS'],ls='None',marker='o',color=clr_light[n],alpha=0.5,label=a)
+					Erange = np.arange(10.0, 65.0, 0.1)
+					ax.plot(Erange,self.interpolate(istp,'tendl',smooth=True)(Erange),color=self.pallate['aq'],ls='-.',label='TENDL-2017')
 				elif istp in ['58CO','63ZN','62ZN','22NA','24NA']:
 					Erange = np.arange(min([i['E'] for i in xs])-1.0,max([i['E'] for i in xs]),0.1)
 					ax.plot(Erange,self.interpolate(istp,'monitor')(Erange),color=self.pallate['b'],label='IAEA Rec. Value')
 				else:
-					Erange = np.arange(min([i['E'] for i in xs])-1.0,max([i['E'] for i in xs]),0.1)
-					scl_talys = 0.1 if istp=='134CE' else 1.0
-					scl_empire = 0.05 if istp=='132CS' else 1.0
-					ax.plot(Erange,scl_talys*self.interpolate(istp,'talys')(Erange),color=self.pallate['b'],label=('0.1x ' if istp=='134CE' else '')+'TALYS Calculation',lw=2.0)
-					ax.plot(Erange,scl_empire*self.interpolate(istp,'empire')(Erange),color=self.pallate['r'],ls='--',label=('0.05x ' if istp=='132CS' else '')+'EMPIRE Calculation',lw=2.0)
-					ax.plot(Erange,scl_talys*self.interpolate(istp,'alice')(Erange),color=self.pallate['p'],ls='-.',label=('0.1x ' if istp=='134CE' else '')+'ALICE Calculation',lw=2.0)
+					# Erange = np.arange(min([i['E'] for i in xs])-1.0,max([i['E'] for i in xs]),0.1)
+					Erange = np.arange(35.0, 65.0, 0.1)
+					# scl_talys = 0.1 if istp=='134CE' else 1.0
+					# scl_empire = 0.05 if istp=='132CS' else 1.0
+					scl_talys, scl_empire = 1.0, 1.0
+					ax.plot(Erange,scl_talys*self.interpolate(istp,'talys',smooth=True)(Erange),color=self.pallate['b'],label=('0.1x ' if scl_talys!=1.0 else '')+'TALYS Calculation',lw=2.0)
+					ax.plot(Erange,scl_empire*self.interpolate(istp,'empire',smooth=True)(Erange),color=self.pallate['r'],ls='--',label=('0.05x ' if scl_empire!=1.0 else '')+'EMPIRE Calculation',lw=2.0)
+					ax.plot(Erange,self.interpolate(istp,'tendl',smooth=True)(Erange),color=self.pallate['aq'],ls='-.',label='TENDL-2017')
+					if istp not in ['133BAg','137CEg']:
+						ax.plot(Erange,scl_talys*self.interpolate(istp,'alice',smooth=True)(Erange),color=self.pallate['p'],ls='-.',label=('0.1x ' if scl_talys!=1.0 else '')+'ALICE Calculation',lw=2.0)
+					if istp in ['139CE','137CEm','137CEg','135CE','134CE','135LA','133BAg','133BAm']:
+						x4 = self.get_exfor(istp)
+						cl = colors(shade='light')
+						clr_light = [cl['gy'],cl['g'],cl['p'],cl['b'],cl['o'],cl['r'],cl['aq']]
+						for n,a in enumerate(x4):
+							ax.errorbar(x4[a]['E'],x4[a]['XS'],xerr=x4[a]['dE'],yerr=x4[a]['dXS'],ls='None',marker='o',color=clr_light[n],alpha=0.5,label=a)
 			ax.errorbar([i['E'] for i in xs],[i['sigma'] for i in xs],xerr=[i['dE'] for i in xs],yerr=[i['unc_sigma'] for i in xs],ms=ms,ls='None',marker='o',color=self.pallate['k'],label=r'Measured $\sigma$'+'\n(this work)',zorder=10) #,elinewidth=3.0
 			ax.set_xlabel('Energy (MeV)')#,fontsize=18
 			ax.set_ylabel('Cross Section (mb)')#,fontsize=18
@@ -1095,7 +1125,8 @@ class monitors(object):
 		self.foil_ids += ['Al'+('0' if n<10 else '')+str(n) for n in range(1,11)]
 		self.sample_map = {'Cu':['62ZN','63ZN','58CO'],'Al':['22NA','24NA']}
 		self.monitor_channels = None
-		self.pallate = plotter().pallate()
+		self.pallate = {'k':'#34495e','gy':'#95a5a6','r':'#e74c3c','b':'#3498db','g':'#2ecc71',
+	'aq':'#1abc9c','o':'#e67e22','y':'#f1c40f','p':'#9b59b6','w':'#ecf0f1'}
 	def simple_regression(self,x,y):
 		xb,yb = np.average(x),np.average(y)
 		m = sum([(i-xb)*(y[n]-yb) for n,i in enumerate(x)])/sum([(i-xb)**2 for i in x])
@@ -1174,26 +1205,30 @@ class monitors(object):
 			E,dE = self.get_eng_dist(fl,table)
 			self.db.execute('INSERT INTO monitor_data VALUES(?,?,?,?,?)',(fl,E,dE,fit[0]*E+fit[1],np.sqrt(unc[0][0]*E**2+unc[1][1]+2.0*E*unc[0][1])))
 		self.db_connection.commit()
+		
+		f,ax = plt.subplots()
+		clr = {'62ZN':self.pallate['r'],'22NA':self.pallate['b'],'24NA':self.pallate['p'],'63ZN':self.pallate['aq'],'58CO':self.pallate['gy']}
+		lbl = {'62ZN':'Cu(p,x)','22NA':'Al(p,x)','24NA':'Al(p,x)','63ZN':'Cu(p,x)','58CO':'Cu(p,x)'}
+		channels = list(set([c['istp'] for c in self.monitor_channels]))
+		Erange = np.arange(min(x)-1.0,max(x),0.1)
+		for ch in channels:
+			x,y,dx,dy = [c['E'] for c in self.monitor_channels if c['istp']==ch],[c['I'] for c in self.monitor_channels if c['istp']==ch],[c['dE'] for c in self.monitor_channels if c['istp']==ch],[c['sigI'] for c in self.monitor_channels if c['istp']==ch]
+			ax.errorbar(x,y,xerr=dx,yerr=dy,ls='None',marker='o',color=clr[ch],label=lbl[ch]+isotope(ch).TeX())
+		ax.plot(Erange,[fit[0]*i+fit[1] for i in Erange],color=self.pallate['k'],label='Linear Fit')
+		ax.plot(Erange,[fit[0]*i+fit[1]+np.sqrt(unc[0][0]*i**2+unc[1][1]+2.0*i*unc[0][1]) for i in Erange],ls='--',color=self.pallate['k'],label=r'$\pm 1\sigma_{fit}$')
+		ax.plot(Erange,[fit[0]*i+fit[1]-np.sqrt(unc[0][0]*i**2+unc[1][1]+2.0*i*unc[0][1]) for i in Erange],ls='--',color=self.pallate['k'])
+		# ax.set_ylim(-0.5,ax.get_ylim()[1])
+		ax.set_xlabel('Proton Energy (MeV)',fontsize=18)
+		ax.set_ylabel('Monitor Current (nA)',fontsize=18)
+		ax.legend(loc=0,ncol=2)
+		f.tight_layout()
 		if saveplot:
-			f,ax = plt.subplots()
-			clr = {'62ZN':self.pallate['r'],'22NA':self.pallate['b'],'24NA':self.pallate['p'],'63ZN':self.pallate['aq'],'58CO':self.pallate['gy']}
-			lbl = {'62ZN':'Cu(p,x)','22NA':'Al(p,x)','24NA':'Al(p,x)','63ZN':'Cu(p,x)','58CO':'Cu(p,x)'}
-			channels = list(set([c['istp'] for c in self.monitor_channels]))
-			Erange = np.arange(min(x)-1.0,max(x),0.1)
-			for ch in channels:
-				x,y,dx,dy = [c['E'] for c in self.monitor_channels if c['istp']==ch],[c['I'] for c in self.monitor_channels if c['istp']==ch],[c['dE'] for c in self.monitor_channels if c['istp']==ch],[c['sigI'] for c in self.monitor_channels if c['istp']==ch]
-				ax.errorbar(x,y,xerr=dx,yerr=dy,ls='None',marker='o',color=clr[ch],label=lbl[ch]+isotope(ch).TeX())
-			ax.plot(Erange,[fit[0]*i+fit[1] for i in Erange],color=self.pallate['k'],label='Linear Fit')
-			ax.plot(Erange,[fit[0]*i+fit[1]+np.sqrt(unc[0][0]*i**2+unc[1][1]+2.0*i*unc[0][1]) for i in Erange],ls='--',color=self.pallate['k'],label=r'$\pm 1\sigma_{fit}$')
-			ax.plot(Erange,[fit[0]*i+fit[1]-np.sqrt(unc[0][0]*i**2+unc[1][1]+2.0*i*unc[0][1]) for i in Erange],ls='--',color=self.pallate['k'])
-			ax.set_ylim(-0.5,ax.get_ylim()[1])
-			ax.set_xlabel('Proton Energy (MeV)',fontsize=18)
-			ax.set_ylabel('Monitor Current (nA)',fontsize=18)
-			ax.legend(loc=0,ncol=2)
-			f.tight_layout()
 			f.savefig('../plots/monitors/current_norm_'+table+'.png')
 			f.savefig('../plots/monitors/current_norm_'+table+'.pdf')
-			plt.close()
+		else:
+			plt.show()
+
+		plt.close()
 	def minimize(self,table='az'):
 		chi2 = []
 		E0,dE0 = 57.0,(0.4 if table=='az' else 0.2)
@@ -1241,10 +1276,10 @@ if __name__=="__main__":
 	# cb.efficiency_calibration()
 	# cb.resolution_calibration()
 
-	# mn = monitors()
+	mn = monitors()
 	# mn.fit_monitor_peaks()
 	# mn.fit_initial_activities()
-	# mn.calculate_current()
+	mn.calculate_current()
 	# mn.plot_Al_correction('22NA')
 	# mn.plot_Al_correction('24NA')
 	# mn.minimize('az')
@@ -1256,7 +1291,7 @@ if __name__=="__main__":
 	# xsl.fit_parent_daughter_activities()
 	# xsl.fit_134CE_activity()
 	xsl.plot_cross_sections()
-	xsl.plot_cross_sections(prediction=False)
+	# xsl.plot_cross_sections(prediction=False)
 	# xsl.save_as_csv()
 	# xsl.save_as_xlsx()
 	# xsl.save_as_tex()
